@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import { Home } from './components/Home';
+import { Browse } from './components/Browse';
+import { GamePage } from './components/GamePage';
+import { Navbar } from './components/Navbar';
+import bgvideo from './media/cyberpunk-bg.mp4';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <video
+        autoPlay
+        loop
+        id="bg-video"
+        className="h-screen object-cover fixed z-[-1]"
+      >
+        <source src={bgvideo} type="video/mp4" />
+      </video>
+
+      <Navbar />
+
+      <Routes>
+        <Route path="/ecommerce-store" element={<Home />} />
+        <Route path="/ecommerce-store/browse" element={<Browse />} />
+        <Route path="/ecommerce-store/games/:id" element={<GamePage />} />
+      </Routes>
     </div>
   );
 }
