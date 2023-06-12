@@ -19,3 +19,101 @@
 :root {
   --ff-primary: 'Poppins', sans-serif;
 }
+
+.carousel-item {
+  animation-name: something !important;
+  animation-duration: 1s !important;
+}
+
+@keyframes something {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.box {
+  margin: 0 0 !important;
+  margin-inline: auto;
+  max-height: 1000px !important;
+}
+
+@media only screen and (max-width: 2160px) {
+  .prev,
+  .next,
+  .carousel-caption-bottom,
+  .carousel-caption-center,
+  .carousel-caption-top,
+  .slide-number {
+    font-size: 20px !important;
+  }
+  .carousel-container {
+    max-height: 560px !important;
+    min-width: 920px !important;
+  }
+  .thumbnail {
+    max-width: 120px;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .carousel-container {
+    max-height: 500px !important;
+    min-width: 840px !important;
+  }
+  .thumbnail {
+    max-width: 115px;
+  }
+}
+
+@media only screen and (max-width: 1535px) {
+  .carousel-container {
+    max-height: 500px !important;
+    min-width: 840px !important;
+  }
+  .thumbnail {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .carousel-container {
+    max-height: 450px !important;
+    min-width: 800px !important;
+  }
+  .thumbnail {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .carousel-container {
+    max-height: 400px !important;
+    min-width: 730px !important;
+  }
+  .thumbnail {
+    max-width: 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-container {
+    max-height: 340px !important;
+    min-width: 600px !important;
+  }
+  .thumbnail {
+    max-width: 75px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .carousel-container {
+    max-height: 280px !important;
+    min-width: auto !important;
+  }
+  .thumbnail {
+    max-width: 68px;
+  }
+}

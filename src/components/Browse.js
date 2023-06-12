@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import spidermanmilesmorales from '../img/spidermanmilesmorales.png';
-import fifa23 from '../img/fifa23.jpg';
+import spidermanmilesmorales from '../img/marvelsspidermanmilesmorales/img1.png';
+import fifa23 from '../img/fifa23/img1.jpg';
 import cyberpunk from '../img/cyberpunk.jpg';
 import godofwar from '../img/godofwar.jpg';
 import lastofus from '../img/lastofus.jpg';
@@ -44,17 +44,13 @@ const GameList = () => {
       <div>
         <div className="border border-[transparent]">
           <Link to="/ecommerce-store/games/fifa23">
-            <img
-              src={fifa23}
-              alt="Marvels Spiderman: Miles Morales"
-              className="rounded-t-2xl"
-            />
+            <img src={fifa23} alt="Fifa 23" className="rounded-t-2xl" />
             <div className=" bg-zinc-800 rounded-b-2xl h-32 p-4">
               <div className="flex justify-between">
                 <div>$99.95</div>
                 <div>Heart</div>
               </div>
-              <div className="text-2xl font-bold">EA SPORTS FIFA 23</div>
+              <div className="text-2xl font-bold">EA SPORTS™ FIFA 23</div>
             </div>
           </Link>
         </div>
