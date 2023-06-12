@@ -12,8 +12,11 @@ function App() {
       <video
         autoPlay
         loop
+        muted
+        playsInline
         id="bg-video"
-        className="h-screen object-cover fixed z-[-1]"
+        className="h-screen object-cover fixed z-[-1] min-h-full min-w-full bg-fixed 
+        bg-blend-darken"
       >
         <source src={bgvideo} type="video/mp4" />
       </video>
