@@ -117,3 +117,7 @@
     max-width: 68px;
   }
 }
+
+.negativeSidebar {
+  width: 100vw;
+}

@@ -1,6 +1,4 @@
 import { Carousel } from 'react-carousel-minimal';
-import { gameDataLibrary } from './gameDataLibrary';
-import { useEffect, useState } from 'react';
 
 export const ImageSlider = ({ id, images }) => {
   const data = [
@@ -16,11 +14,15 @@ export const ImageSlider = ({ id, images }) => {
       image: require(`../img/${id}/img3.${images.third}`),
       caption: '',
     },
+    {
+      image: require(`../img/${id}/img4.${images.fourth}`),
+      caption: '',
+    },
   ];
 
   return (
     <>
-      <div className="yo flex justify-center pt-6 pb-6">
+      <div className="yo flex justify-center pt-6 pb-6 z-[-10]">
         <Carousel
           data={data}
           time={4000}

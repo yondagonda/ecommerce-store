@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
 import { ImageSlider } from './ImageCarousel';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { CartContext } from '../App';
 
 export const GamePage = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export const GamePage = () => {
   );
 };
 
-const RenderGamePageInfo = ({ id }) => {
+const RenderGamePageInfo = ({ id, onAddToCart }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleOpen = () => {
@@ -59,12 +60,8 @@ const RenderGamePageInfo = ({ id }) => {
                   >
                     <div className="font-bold">${game.price}</div>
 
-                    <button
-                      className="border px-2 py-1 rounded text-sm sm:text-base"
-                      onClick={() => console.log(game)}
-                    >
-                      Add to Cart
-                    </button>
+                    <RenderAddToCartButton currentGame={game} />
+
                     <div className="text-sm sm:text-base">
                       + Add to Wishlist
                     </div>
@@ -130,10 +127,12 @@ const RenderGamePageInfo = ({ id }) => {
                               <span className="text-gray-400">Graphics: </span>
                               {game.systemReqs[0].graphics}
                             </div>
-                            <div>
-                              <span className="text-gray-400">DirectX: </span>
-                              {game.systemReqs[0].directX}
-                            </div>
+                            {game.systemReqs[0].directX ? (
+                              <div>
+                                <span className="text-gray-400">DirectX: </span>
+                                {game.systemReqs[0].directX}
+                              </div>
+                            ) : null}
                             <div>
                               <span className="text-gray-400">Storage: </span>
                               {game.systemReqs[0].storage}
@@ -159,10 +158,12 @@ const RenderGamePageInfo = ({ id }) => {
                               <span className="text-gray-400">Graphics: </span>
                               {game.systemReqs[1].graphics}
                             </div>
-                            <div>
-                              <span className="text-gray-400">DirectX: </span>
-                              {game.systemReqs[1].directX}
-                            </div>
+                            {game.systemReqs[1].directX ? (
+                              <div>
+                                <span className="text-gray-400">DirectX: </span>
+                                {game.systemReqs[1].directX}
+                              </div>
+                            ) : null}
                             <div>
                               <span className="text-gray-400">Storage: </span>
                               {game.systemReqs[1].storage}
@@ -182,4 +183,40 @@ const RenderGamePageInfo = ({ id }) => {
       })}
     </>
   );
+};
+
+const RenderAddToCartButton = ({ currentGame }) => {
+  const ourCart = useContext(CartContext);
+  const { cart, setSelectedGame, selectedGame, setIsCartOpen } = ourCart;
+
+  const [isGameAdded, setIsGameAdded] = useState(false);
+
+  const addToCartButton = (
+    <button
+      className="border px-2 py-1 rounded text-sm sm:text-base"
+      onClick={() => {
+        setSelectedGame(currentGame);
+      }}
+    >
+      Add to Cart
+    </button>
+  );
+
+  const viewInCartButton = (
+    <button
+      className="border px-2 py-1 rounded text-sm sm:text-base"
+      onClick={() => setIsCartOpen(true)}
+    >
+      View in Cart
+    </button>
+  );
+
+  useEffect(() => {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === currentGame.id) return setIsGameAdded(true);
+    }
+    return setIsGameAdded(false);
+  }, [cart]);
+
+  return <>{isGameAdded ? viewInCartButton : addToCartButton}</>;
 };
