@@ -121,3 +121,17 @@
 .negativeSidebar {
   width: 100vw;
 }
+
+.searchicon:hover {
+  filter: invert(50%) sepia(102%) saturate(300%) hue-rotate(161deg)
+    brightness(904%) contrast(60%);
+  transition: 0.2s;
+}
+
+video {
+  overflow: scroll; /* this ensure no scroll bars */
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

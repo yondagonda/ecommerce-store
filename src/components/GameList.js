@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
-import { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../App';
 import addWL from '../img/symbols/addWL.svg';
 import removeWL from '../img/symbols/removeWL.svg';
 
 export const GameList = () => {
-  //   console.log('re rendering gamelist');
-  const { currentFilter, wishlist } = useContext(CartContext);
+  const { currentFilter, wishlist, searchResults, setSearchResults } =
+    useContext(CartContext);
 
   return (
     <div
       className="bg-zinc-900 grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4
-        xs:grid-cols-2 gap-3 sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3"
+        xs:grid-cols-2 gap-3 sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3 glist items-end"
     >
       {gameDataLibrary.map((game) => {
         if (
@@ -34,26 +34,39 @@ export const GameList = () => {
             );
           }
         }
+        if (currentFilter === 'Search') {
+          if (searchResults.includes(game.id)) {
+            return (
+              <div className="border border-[transparent]" key={game.id}>
+                <GameCardRender game={game} />
+              </div>
+            );
+          }
+        }
+        if (currentFilter === 'Error Page') {
+          if (searchResults.includes(game.id)) {
+            return (
+              <div className="border border-[transparent]" key={game.id}>
+                <GameCardRender />
+                {/* Maybe render an error page here instead? or a 'no results found' page etc.  */}
+              </div>
+            );
+          }
+        }
       })}
     </div>
   );
 };
 
-const GameCardRender = ({ game }) => {
-  const {
-    setWishlist,
-    setAddToWish,
-    wishlist,
-    onWishlistRemove,
-    onWishlistAdd,
-  } = useContext(CartContext);
+export const GameCardRender = ({ game }) => {
+  const { wishlist, onWishlistRemove, onWishlistAdd } = useContext(CartContext);
 
   return (
     <Link to={`/ecommerce-store/games/${game.id}`}>
       <img
         src={require(`../img/${game.id}/img1.${game.images.first}`)}
         alt={game.title}
-        className="rounded-t-2xl"
+        className="rounded-t-2xl h-[100%]"
       />
       <div className="bg-zinc-800 rounded-b-2xl h-24 md:h-28 p-4">
         <div className="flex justify-between">

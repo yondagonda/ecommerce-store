@@ -9,8 +9,18 @@ import { Navbar } from './components/Navbar';
 import { BackgroundVideo } from './components/BackgroundVideo';
 import { useState } from 'react';
 import { Cart } from './components/Cart';
+import { gameDataLibrary } from './components/gameDataLibrary';
 
 export const CartContext = React.createContext();
+export const SearchContext = React.createContext();
+
+// TODO:
+// Error page (one for when no search results, and one for general?)
+// Sort out fonts/font-pairing
+// Start designing the home page (make it diff to gianlucas)
+// ADD MORE GAMES INTO THE DB
+
+// Then, after doing all the previous, sort out media queries for everything
 
 function App() {
   const [selectedGame, setSelectedGame] = useState();
@@ -20,18 +30,45 @@ function App() {
   const [currentFilter, setCurrentFilter] = useState();
   const [addToWish, setAddToWish] = useState();
   const [wishlist, setWishlist] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const matches = [];
+  let flag = false;
+
+  const onExecuteSearch = () => {
+    if (searchInput.length > 0) {
+      gameDataLibrary.map((game) => {
+        let match = game.title.match(new RegExp(searchInput, 'i'));
+
+        if (match) {
+          flag = true;
+          setCurrentFilter('Search');
+          console.log(game.id);
+          matches.push(game.id);
+        }
+        setSearchResults(matches);
+      });
+      if (flag === false) {
+        console.log('didint find shit yo');
+        setCurrentFilter('Error Page');
+      }
+    } else {
+      setCurrentFilter();
+    }
+  };
+
+  useEffect(() => {
+    if (searchResults.length > 0) {
+      console.log(searchResults);
+    }
+  }, [searchResults]);
 
   useEffect(() => {
     if (addToWish) {
       setWishlist(wishlist.concat(addToWish));
     }
   }, [addToWish]);
-
-  useEffect(() => {
-    if (wishlist) {
-      console.log(wishlist);
-    }
-  }, [wishlist]);
 
   useEffect(() => {
     if (currentFilter) {
@@ -99,8 +136,17 @@ function App() {
           isCartOpen={isCartOpen}
         />
       ) : null}
+      <SearchContext.Provider
+        value={{
+          searchInput,
+          setSearchInput,
+          setCurrentFilter,
+          onExecuteSearch,
+        }}
+      >
+        <Navbar setIsCartOpen={setIsCartOpen} isCartOpen setCurrentFilter />
+      </SearchContext.Provider>
 
-      <Navbar setIsCartOpen={setIsCartOpen} isCartOpen />
       <CartContext.Provider
         value={{
           selectedGame,
@@ -115,6 +161,8 @@ function App() {
           setWishlist,
           onWishlistAdd,
           onWishlistRemove,
+          searchResults,
+          setSearchResults,
         }}
       >
         <Routes>

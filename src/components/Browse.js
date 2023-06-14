@@ -11,9 +11,10 @@ export const Browse = () => {
 
   return (
     <div
-      className="text-slate-50 bg-zinc-900 h-screen 
+      className="text-slate-50 bg-zinc-900 h-[100vh] overflow-[none]
     flex"
     >
+      {/* the height above should be 100vh - footer height */}
       <Filters />
 
       <div className="">

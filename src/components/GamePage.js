@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
 import { ImageSlider } from './ImageCarousel';
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../App';
 import addWL from '../img/symbols/addWL.svg';
 import removeWL from '../img/symbols/removeWL.svg';

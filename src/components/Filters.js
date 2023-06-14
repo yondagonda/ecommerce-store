@@ -1,5 +1,5 @@
 import { FilterContext } from './Browse';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../App';
 
 export const Filters = () => {
@@ -16,7 +16,7 @@ export const Filters = () => {
           <button onClick={(e) => setCurrentFilter(e.target.innerText)}>
             Wishlist
           </button>
-          {/* <button>Ratings</button>  REMOVING THIS FOR NOW*/}
+          {/* <button>Ratings</button>  REMOVING THIS FILTER FOR NOW*/}
         </div>
       </div>
 
