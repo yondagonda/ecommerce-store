@@ -17,6 +17,27 @@ function App() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [currentFilter, setCurrentFilter] = useState();
+  const [addToWish, setAddToWish] = useState();
+  const [wishlist, setWishlist] = useState([]);
+
+  useEffect(() => {
+    if (addToWish) {
+      setWishlist(wishlist.concat(addToWish));
+    }
+  }, [addToWish]);
+
+  useEffect(() => {
+    if (wishlist) {
+      console.log(wishlist);
+    }
+  }, [wishlist]);
+
+  useEffect(() => {
+    if (currentFilter) {
+      console.log(`changing filter to: ${currentFilter}`);
+    }
+  }, [currentFilter]);
 
   useEffect(() => {
     if (selectedGame) {
@@ -39,6 +60,19 @@ function App() {
     sum = Math.round(sum * 100) / 100;
     setTotal(sum);
     console.log(sum);
+  };
+
+  const onWishlistAdd = (e, id) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setAddToWish(id);
+  };
+
+  const onWishlistRemove = (e, id) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setWishlist(wishlist.filter((item) => item !== id));
+    setAddToWish();
   };
 
   useEffect(() => {
@@ -68,7 +102,20 @@ function App() {
 
       <Navbar setIsCartOpen={setIsCartOpen} isCartOpen />
       <CartContext.Provider
-        value={{ selectedGame, setSelectedGame, cart, setIsCartOpen }}
+        value={{
+          selectedGame,
+          setSelectedGame,
+          cart,
+          setIsCartOpen,
+          currentFilter,
+          setCurrentFilter,
+          addToWish,
+          setAddToWish,
+          wishlist,
+          setWishlist,
+          onWishlistAdd,
+          onWishlistRemove,
+        }}
       >
         <Routes>
           <Route path="/ecommerce-store" element={<Home />} />

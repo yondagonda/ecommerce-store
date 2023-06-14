@@ -112,7 +112,7 @@ export const gameDataLibrary = [
     title: `God of War`,
     price: '44.97',
     details: {
-      genre: 'Action, Singeplayer',
+      genre: 'Action, Singleplayer',
       releaseDate: '15 Jan 2022',
       developer: 'Santa Monica Studio',
       publisher: 'PlayStation PC LLC',

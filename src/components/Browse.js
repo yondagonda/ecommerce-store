@@ -1,41 +1,38 @@
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
+import { Filters } from './Filters';
+import React, { useEffect, useState } from 'react';
+import { GameList } from './GameList';
+import { CartContext } from '../App';
+import { useContext } from 'react';
 
 export const Browse = () => {
-  return (
-    <div className="text-slate-50 bg-zinc-900 h-screen">
-      <div className="text-3xl">Games</div>
-      <GameList />
-    </div>
-  );
-};
+  const { setCurrentFilter, currentFilter } = useContext(CartContext);
 
-const GameList = () => {
   return (
     <div
-      className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3
-      sm:grid-cols-2 text-slate-50 gap-6 p-3"
+      className="text-slate-50 bg-zinc-900 h-screen 
+    flex"
     >
-      {gameDataLibrary.map((game) => {
-        return (
-          <div className="border border-[transparent]" key={game.id}>
-            <Link to={`/ecommerce-store/games/${game.id}`}>
-              <img
-                src={require(`../img/${game.id}/img1.${game.images.first}`)}
-                alt={game.title}
-                className="rounded-t-2xl"
-              />
-              <div className="bg-zinc-800 rounded-b-2xl h-32 p-4">
-                <div className="flex justify-between">
-                  <div>${game.price}</div>
-                  <div>+ Wishlist</div>
-                </div>
-                <div className="text-2xl font-bold">{game.title}</div>
-              </div>
-            </Link>
+      <Filters />
+
+      <div className="">
+        <div>
+          <div className="text-2xl px-4 pt-7 mb-2">Featured & Recommended</div>
+          <div className="px-4 flex gap-3">
+            <div className="text-sm bg-zinc-800 p-3 rounded-lg">
+              Filter by: {currentFilter ? currentFilter : 'None'}
+            </div>
+            <button
+              className="text-sm bg-zinc-800 p-3 rounded-lg"
+              onClick={() => setCurrentFilter()}
+            >
+              Clear Filter
+            </button>
           </div>
-        );
-      })}
+        </div>
+        <GameList />
+      </div>
     </div>
   );
 };

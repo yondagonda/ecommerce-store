@@ -4,6 +4,8 @@ import { gameDataLibrary } from './gameDataLibrary';
 import { ImageSlider } from './ImageCarousel';
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../App';
+import addWL from '../img/symbols/addWL.svg';
+import removeWL from '../img/symbols/removeWL.svg';
 
 export const GamePage = () => {
   const { id } = useParams();
@@ -17,6 +19,13 @@ export const GamePage = () => {
 
 const RenderGamePageInfo = ({ id, onAddToCart }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const {
+    setWishlist,
+    setAddToWish,
+    wishlist,
+    onWishlistRemove,
+    onWishlistAdd,
+  } = useContext(CartContext);
 
   const handleOpen = () => {
     setDropdownOpen(!dropdownOpen);
@@ -62,9 +71,21 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
 
                     <RenderAddToCartButton currentGame={game} />
 
-                    <div className="text-sm sm:text-base">
-                      + Add to Wishlist
-                    </div>
+                    {wishlist.includes(game.id) ? (
+                      <img
+                        onClick={(e) => onWishlistRemove(e, game.id)}
+                        src={removeWL}
+                        alt="heart"
+                        className="h-6 cursor-pointer"
+                      />
+                    ) : (
+                      <img
+                        onClick={(e) => onWishlistAdd(e, game.id)}
+                        src={addWL}
+                        alt="heart"
+                        className="h-6 cursor-pointer"
+                      />
+                    )}
                   </div>
 
                   <div className="bg-zinc-800 rounded-2xl max-w-[1152px]">
