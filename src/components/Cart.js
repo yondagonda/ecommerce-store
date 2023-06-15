@@ -28,7 +28,7 @@ export const Cart = ({
         <div className="text-slate-50 flex flex-col justify-between h-full">
           <div>
             <div className="flex justify-between mb-4">
-              <div className="text-3xl">My Cart</div>
+              <div className="text-3xl font-secondary">My Cart</div>
               <button onClick={() => setIsCartOpen(false)}>Close</button>
             </div>
 
@@ -54,8 +54,10 @@ export const Cart = ({
               })}
             </div>
           </div>
-          <div className="flex justify-around items-center">
-            <div>{cart.length > 0 ? `Total: $${total}` : `Total: $0`}</div>
+          <div className="flex justify-around items-center  font-secondary">
+            <div className="text-xl">
+              {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
+            </div>
             <div className="text-2xl">Checkout ➜</div>
           </div>
         </div>

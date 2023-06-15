@@ -10,17 +10,16 @@ import { BackgroundVideo } from './components/BackgroundVideo';
 import { useState } from 'react';
 import { Cart } from './components/Cart';
 import { gameDataLibrary } from './components/gameDataLibrary';
+import { Notfound } from './components/Notfound';
 
 export const CartContext = React.createContext();
 export const SearchContext = React.createContext();
 
 // TODO:
-// Error page (one for when no search results, and one for general?)
-// Sort out fonts/font-pairing
-// Start designing the home page (make it diff to gianlucas)
 // ADD MORE GAMES INTO THE DB
+// clean up/finalise error 404 page
 
-// Then, after doing all the previous, sort out media queries for everything
+// Then, only after doing all the previous, sort out media queries for everything
 
 function App() {
   const [selectedGame, setSelectedGame] = useState();
@@ -32,6 +31,7 @@ function App() {
   const [wishlist, setWishlist] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [isBrowseOpen, setIsBrowseOpen] = useState(false);
 
   const matches = [];
   let flag = false;
@@ -144,7 +144,13 @@ function App() {
           onExecuteSearch,
         }}
       >
-        <Navbar setIsCartOpen={setIsCartOpen} isCartOpen setCurrentFilter />
+        <Navbar
+          setIsCartOpen={setIsCartOpen}
+          isCartOpen={isCartOpen}
+          setCurrentFilter={setCurrentFilter}
+          isBrowseOpen={isBrowseOpen}
+          setIsBrowseOpen={setIsBrowseOpen}
+        />
       </SearchContext.Provider>
 
       <CartContext.Provider
@@ -163,9 +169,12 @@ function App() {
           onWishlistRemove,
           searchResults,
           setSearchResults,
+          setSearchInput,
+          setIsBrowseOpen,
         }}
       >
         <Routes>
+          <Route path="*" element={<Notfound />} />
           <Route path="/ecommerce-store" element={<Home />} />
           <Route path="/ecommerce-store/browse" element={<Browse />} />
           <Route path="/ecommerce-store/games/:id" element={<GamePage />} />

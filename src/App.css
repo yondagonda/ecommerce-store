@@ -2,22 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: var(--ff-primary);
-}
-
-:root {
-  --ff-primary: 'Poppins', sans-serif;
+@layer base {
+  html {
+    font-family: 'Barlow', sans-serif;
+  }
 }
 
 .carousel-item {
@@ -134,4 +125,15 @@ video {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+.error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.margininlineauto {
+  margin-inline: auto;
 }

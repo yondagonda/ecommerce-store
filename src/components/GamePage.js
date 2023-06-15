@@ -48,7 +48,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                   <div className="border px-2 sm:px-3 sm:py-1 rounded">⬅</div>
                 </Link>
                 <div
-                  className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold
+                  className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold font-secondary
                "
                 >
                   {game.title}
@@ -67,7 +67,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                     className="rounded-2xl px-4 py-1.5 sm:p-2.5 mb-2 flex justify-center
                   items-center bg-zinc-800 gap-4 sm:gap-5 sm:w-[380px]"
                   >
-                    <div className="font-bold">${game.price}</div>
+                    <div className="font-secondary">${game.price}</div>
 
                     <RenderAddToCartButton currentGame={game} />
 
@@ -214,7 +214,8 @@ const RenderAddToCartButton = ({ currentGame }) => {
 
   const addToCartButton = (
     <button
-      className="border px-2 py-1 rounded text-sm sm:text-base"
+      className="border px-2 py-1 rounded text-sm sm:text-base font-secondary
+      "
       onClick={() => {
         setSelectedGame(currentGame);
       }}
@@ -225,7 +226,7 @@ const RenderAddToCartButton = ({ currentGame }) => {
 
   const viewInCartButton = (
     <button
-      className="border px-2 py-1 rounded text-sm sm:text-base"
+      className="border px-2 py-1 rounded text-sm sm:text-base font-secondary"
       onClick={() => setIsCartOpen(true)}
     >
       View in Cart

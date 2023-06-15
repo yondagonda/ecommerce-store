@@ -112,7 +112,7 @@ export const gameDataLibrary = [
     title: `God of War`,
     price: '44.97',
     details: {
-      genre: 'Action, Singleplayer',
+      genre: 'Action, Singleplayer, Adventure',
       releaseDate: '15 Jan 2022',
       developer: 'Santa Monica Studio',
       publisher: 'PlayStation PC LLC',
@@ -150,7 +150,7 @@ export const gameDataLibrary = [
     title: `The Last of Us`,
     price: '94.95',
     details: {
-      genre: 'Action, Adventure',
+      genre: 'Action, Adventure, Singleplayer',
       releaseDate: '29 Mar 2023',
       developer: 'Naughty Dog LLC',
       publisher: 'PlayStation PC LLC',
@@ -212,9 +212,828 @@ export const gameDataLibrary = [
     ],
     images: {
       first: 'jpg',
-      second: 'png',
+      second: 'webp',
       third: 'jpeg',
       fourth: 'jpeg',
+    },
+  },
+  {
+    id: 'acvalhalla',
+    title: `Assassin's Creed Valhalla`,
+    price: '22.48',
+    details: {
+      genre: 'Action, RPG, Adventure',
+      releaseDate: '7 Dec 2022',
+      developer: 'Ubisoft Montreal',
+      publisher: 'Ubisoft',
+      description: `Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla.
+      England in the age of the Vikings is a fractured nation of petty lords and warring kingdoms. Beneath the chaos lies a rich and untamed land waiting for a new conqueror. Will it be you?`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10 (versions 64 bits uniquement)',
+        processor: 'AMD Ryzen 3 1200 3.1 GHz / Intel Core i5-4460 3.2 GHz',
+        memory: '8 GB RAM',
+        graphics: 'AMD R9 380 /NVIDIA GeForce GTX 960',
+        directX: 'Version 12',
+        storage: '160 GB available space',
+      },
+      {
+        OS: 'Windows 10 (versions 64 bits uniquement)',
+        processor: 'AMD Ryzen 5 1600 3.2 GHz / Intel Core i7-4790 3.6 GHz',
+        memory: '8 GB RAM',
+        graphics: 'AMD R9 380 /NVIDIA GeForce GTX 960',
+        directX: 'Version 12',
+        storage: '160 GB available space',
+      },
+    ],
+    images: {
+      first: 'webp',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'webp',
+    },
+  },
+  {
+    id: 'codmw2',
+    title: `Call of Duty®: Modern Warfare® II`,
+    price: '109.95',
+    details: {
+      genre: 'Action, Shooter, Singleplayer, Multiplayer',
+      releaseDate: '28 Oct 2022',
+      developer:
+        'Infinity Ward, Raven Software, Beenox, Treyarch, High Moon Studios, Sledgehammer Games, Activision Shanghai, Demonware, Toys for Bob',
+      publisher: 'Activision',
+      description: `Welcome to the new era of Call of Duty®.
+
+      Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141. From small-scale, high-stakes infiltration tactical ops to highly classified missions, players will deploy alongside friends in a truly immersive experience.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows® 10 64 Bit (latest update)',
+        processor: 'Intel® Core™ i3-6100 / Core™ i5-2500K or AMD Ryzen™ 3 1200',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA® GeForce® GTX 960 or AMD Radeon™ RX 470',
+        directX: 'Version 12',
+        storage: '125 GB available space',
+      },
+      {
+        OS: 'Windows® 10 64 Bit (latest update) or Windows® 11 64 Bit (latest update)',
+        processor: 'Intel® Core™ i5-6600K / Core™ i7-4770 or AMD Ryzen™ 5 1400',
+        memory: '12 GB RAM',
+        graphics: 'NVIDIA® GeForce® GTX 1060 or AMD Radeon™ RX 580',
+        directX: 'Version 12',
+        storage: '125 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'citiesskyline2',
+    title: `Cities: Skylines II`,
+    price: '69.95',
+    details: {
+      genre: 'Simulation, Strategy, Singleplayer',
+      releaseDate: '25 Oct 2023',
+      developer: 'Colossal Order Ltd.',
+      publisher: 'Paradox Interactive',
+      description: `Raise a city from the ground up and transform it into the thriving metropolis only you can imagine. You've never experienced building on this scale. With deep simulation and a living economy, Cities: Skylines II delivers world-building without limits.
+      Lay the foundations for your city to begin. Create the roads, infrastructure, and systems that make life possible day to day. It's up to you – all of it.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows® 10 Home 64 Bit',
+        processor: 'Intel® Core™ i7-4790K / AMD® Ryzen™ 5 1600X',
+        memory: '8 GB RAM',
+        graphics: 'Nvidia® GeForce™ GTX 780 (3GB) or AMD® Radeon™ RX 470 (4GB)',
+        storage: '125 GB available space',
+      },
+      {
+        OS: 'Windows® 10 Home 64 Bit | Windows® 11',
+        processor: 'Intel® Core™ i7-9700K | AMD® Ryzen™ 5 5600X',
+        memory: '16 GB RAM',
+        graphics:
+          'Nvidia® GeForce™ RTX 2080 Ti (11GB) | AMD® Radeon™ RX 6800 XT (16GB)',
+        storage: '125 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'png',
+      third: 'jpg',
+      fourth: 'png',
+    },
+  },
+  {
+    id: 'outerwilds',
+    title: `Outer Wilds`,
+    price: '36.95',
+    details: {
+      genre: 'Puzzle, Adventure, Mystery',
+      releaseDate: '19 Jun 2020',
+      developer: 'Mobius Digital',
+      publisher: 'Annapurna Interactive',
+      description: `Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7',
+        processor: 'Intel Core i5-2300 | AMD FX-4350',
+        memory: '6 GB RAM',
+        graphics: 'Nvidia GeForce GTX 660, 2 GB | AMD Radeon HD 7870, 2 GB',
+        storage: '8 GB available space',
+      },
+      {
+        OS: 'Windows 10',
+        processor: 'Intel Core i5-8400 | AMD Ryzen 5 2600X',
+        memory: '8 GB RAM',
+        graphics: 'Nvidia GeForce GTX 1060 | AMD Radeon RX 580',
+        storage: '8 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'png',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'hogwartslegacy',
+    title: `Hogwarts Legacy`,
+    price: '89.95',
+    details: {
+      genre: 'Fantasy, Action, Adventure, RPG, Singleplayer',
+      releaseDate: '11 Feb 2023',
+      developer: 'Avalanche Software',
+      publisher: 'Warner Bros. Games',
+      description: `Hogwarts Legacy is an open-world action RPG set in the world first introduced in the Harry Potter books. Embark on a journey through familiar and new locations as you explore and discover magical beasts, customize your character and craft potions, master spell casting, upgrade talents and become the wizard you want to be.`,
+    },
+    systemReqs: [
+      {
+        OS: '64-bit Windows 10',
+        processor: 'Intel Core i5-6600 (3.3Ghz) or AMD Ryzen 5 1400 (3.2Ghz)',
+        memory: '16 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 960 4GB or AMD Radeon RX 470 4GB',
+        directX: 'Version 12',
+        storage: '85 GB available space',
+      },
+      {
+        OS: '64-bit Windows 10',
+        processor: 'Intel Core i7-8700 (3.2Ghz) or AMD Ryzen 5 3600 (3.6 Ghz)',
+        memory: '16 GB RAM',
+        graphics:
+          'NVIDIA GeForce 1080 Ti or AMD Radeon RX 5700 XT or INTEL Arc A770',
+        directX: 'Version 12',
+        storage: '85 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpeg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'nba2k23',
+    title: `NBA 2K23`,
+    price: '89.95',
+    details: {
+      genre: 'Sports, Simulation',
+      releaseDate: '9 Sep 2022',
+      developer: 'Visual Concepts',
+      publisher: '2K',
+      description: `Rise to the occasion and realize your full potential in NBA 2K23. Prove yourself against the best players in the world and showcase your talent in MyCAREER. Pair today’s All-Stars with timeless legends in MyTEAM. Build a dynasty of your own in MyGM or take the NBA in a new direction with MyLEAGUE. Take on NBA or WNBA teams in PLAY NOW and experience true-to-life gameplay. How will you Answer the Call?`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7 64-bit, Windows 8.1 64-bit or Windows 10 64-bit',
+        processor:
+          'Intel® Core™ i3-2100 @ 3.10 GHz/ AMD FX-4100 @ 3.60 GHz or better',
+        memory: '4 GB RAM',
+        graphics:
+          'NVIDIA® GeForce® GT 450 1GB/ ATI® Radeon™ HD 7770 1 GB or better',
+        directX: 'Version 11',
+        storage: '110 GB available space',
+      },
+      {
+        OS: 'Windows 7 64-bit, Windows 8.1 64-bit or Windows 10 64-bit',
+        processor:
+          'Intel® Core™ i5-4430 @ 3 GHz/ AMD FX-8370 @ 3.4 GHz or better',
+        memory: '8 GB RAM',
+        graphics:
+          'NVIDIA® GeForce® GTX 770 2GB/ ATI® Radeon™ R9 270 2GB or better',
+        directX: 'Version 11',
+        storage: '110 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'png',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'forzahorizon5',
+    title: `Forza Horizon 5`,
+    price: '44.97',
+    details: {
+      genre: 'Sports, Simulation, Racing, Action, Adventure',
+      releaseDate: '9 Sep 2022',
+      developer: 'Playground Games',
+      publisher: 'Xbox Game Studios',
+      description: `Your Ultimate Horizon Adventure awaits! Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world’s greatest cars. Conquer the rugged Sierra Nueva in the ultimate Horizon Rally experience. Requires Forza Horizon 5 game, expansion sold separately.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10 version 15063.0 or higher',
+        processor: 'Intel i5-4460 or AMD Ryzen 3 1200',
+        memory: '8 GB RAM',
+        graphics: 'NVidia GTX 970 OR AMD RX 470',
+        directX: 'Version 12',
+        storage: '110 GB available space',
+      },
+      {
+        OS: 'Windows 10 version 15063.0 or higher',
+        processor: 'Intel i5-8400 or AMD Ryzen 5 1500X',
+        memory: '16 GB RAM',
+        graphics: 'NVidia GTX 1070 OR AMD RX 590',
+        directX: 'Version 12',
+        storage: '110 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpeg',
+      third: 'jpeg',
+      fourth: 'jpeg',
+    },
+  },
+  {
+    id: 'gtav',
+    title: `Grand Theft Auto V`,
+    price: '23.33',
+    details: {
+      genre: 'Action, Multiplayer, Shooter, Adventure',
+      releaseDate: '9 Sep 2022',
+      developer: 'Rockstar North',
+      publisher: 'Rockstar Games',
+      description: `When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1',
+        processor:
+          'Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz',
+        memory: '4 GB RAM',
+        graphics: 'NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)',
+        storage: '72 GB available space',
+      },
+      {
+        OS: 'Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1',
+        processor:
+          'Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GTX 660 2GB / AMD HD 7870 2GB',
+        storage: '72 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'civvi',
+    title: `Sid Meier's Civilization® VI`,
+    price: '89.95',
+    details: {
+      genre: 'Strategy',
+      releaseDate: '21 Oct 2016',
+      developer: 'Firaxis Games, Aspyr (Mac), Aspyr (Linux)',
+      publisher: '2K, Aspyr (Mac), Aspyr (Linux)',
+      description: `Originally created by legendary game designer Sid Meier, Civilization is a turn-based strategy game in which you attempt to build an empire to stand the test of time. Become Ruler of the World by establishing and leading a civilization from the Stone Age to the Information Age. Wage war, conduct diplomacy, advance your culture, and go head-to-head with history’s greatest leaders as you attempt to build the greatest civilization the world has ever known.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7x64 / Windows 8.1x64 / Windows 10x64',
+        processor: 'Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater',
+        memory: '4 GB RAM',
+        graphics:
+          '1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530',
+        directX: 'Version 11',
+        storage: '17 GB available space',
+      },
+      {
+        OS: 'Windows 7x64 / Windows 8.1x64 / Windows 10x64',
+        processor:
+          'Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater',
+        memory: '8 GB RAM',
+        graphics: '2GB & AMD 7970 or nVidia 770 or greater',
+        directX: 'Version 11',
+        storage: '23 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpeg',
+      third: 'jpg',
+      fourth: 'jpeg',
+    },
+  },
+  {
+    id: 'r6seige',
+    title: `Tom Clancy's Rainbow Six® Siege`,
+    price: '11.98',
+    details: {
+      genre: 'Shooter, Multiplayer, Action',
+      releaseDate: '2 Dec 2015',
+      developer: 'Ubisoft Montreal',
+      publisher: 'Ubisoft',
+      description: `Tom Clancy's Rainbow Six® Siege is an elite, realistic, tactical team-based shooter where superior planning and execution triumph. It features 5v5 attack vs. defense gameplay and intense close-quarters combat in destructible environments.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Originally released for Windows 7, the game can be played on Windows 10 and Windows 11 OS',
+        processor:
+          'Intel Core i3 560 @ 3.3 GHz or AMD Phenom II X4 945 @ 3.0 GHz',
+        memory: '6 GB RAM',
+        graphics:
+          'NVIDIA GeForce GTX 460 or AMD Radeon HD 5870 (DirectX-11 compliant with 1GB of VRAM)',
+        storage: '61 GB available space',
+      },
+      {
+        OS: 'Originally released for Windows 7, the game can be played on Windows 10 and Windows 11 OS',
+        processor:
+          'Intel Core i5-2500K @ 3.3 GHz or better or AMD FX-8120 @ 3.1 Ghz or better',
+        memory: '8 GB RAM',
+        graphics:
+          'NVIDIA GeForce GTX 670 (or GTX 760 / GTX 960) or AMD Radeon HD 7970 (or R9 280x [2GB VRAM] / R9 380 / Fury X)',
+        storage: '61 GB available space',
+      },
+    ],
+    images: {
+      first: 'png',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'minecraft',
+    title: 'Minecraft',
+    price: '26.95',
+    details: {
+      genre: 'Adventure, Survival',
+      releaseDate: '18 Nov 2011',
+      developer: 'Mojang Studios',
+      publisher: 'Mojang Studios',
+      description:
+        'Unleash your creativity and embark on limitless adventures in Minecraft. Build, explore, and survive in a world made of blocks. With endless possibilities and a thriving modding community, Minecraft is a game that never ceases to amaze.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/8/10 64-bit',
+        processor: 'Intel Core i3-3210 / AMD A8-7600 APU or equivalent',
+        memory: '4 GB RAM',
+        graphics:
+          'Intel HD Graphics 4000 / NVIDIA GeForce 400 Series / AMD Radeon HD 7000 series',
+        directX: 'Version 11',
+        storage: '4 GB available space',
+      },
+      {
+        OS: 'Windows 10 64-bit',
+        processor: 'Intel Core i5-4690 / AMD A10-7800 or equivalent',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GeForce 700 Series / AMD Radeon Rx 200 Series',
+        directX: 'Version 11',
+        storage: '4 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'amongus',
+    title: 'Among Us',
+    price: '3.99',
+    details: {
+      genre: 'Multiplayer, Strategy',
+      releaseDate: '17 Nov 2018',
+      developer: 'InnerSloth',
+      publisher: 'InnerSloth',
+      description:
+        'Work together or deceive your friends in Among Us. Unmask the impostor aboard a spaceship, complete tasks, and root out the mysterious traitor. With its addictive gameplay and endless suspense, Among Us is a must-play party game.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7 SP1+',
+        processor: 'INTEL i3-4330',
+        memory: '1 GB RAM',
+        graphics: 'INTEL HD Graphics 4600',
+        directX: 'Version 10',
+        storage: '250 MB available space',
+      },
+      {
+        OS: 'Windows 10',
+        processor: 'INTEL i3-4330',
+        memory: '4 GB RAM',
+        graphics: 'Nvidia GTX 650',
+        directX: 'Version 10',
+        storage: '250 MB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'rocketleague',
+    title: 'Rocket League',
+    price: '19.99',
+    details: {
+      genre: 'Sports, Racing',
+      releaseDate: '7 Jul 2015',
+      developer: 'Psyonix LLC',
+      publisher: 'Psyonix LLC',
+      description:
+        'Combine soccer and fast-paced driving in Rocket League. Take control of rocket-powered cars and compete in thrilling matches across a variety of dynamic arenas. With its addictive gameplay and competitive multiplayer, Rocket League is a unique and exciting sports experience.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/8/10 64-bit',
+        processor: '2.5 GHz Dual-core',
+        memory: '4 GB RAM',
+        graphics: 'NVIDIA GeForce 760 / AMD Radeon R7 270X',
+        directX: 'Version 11',
+        storage: '20 GB available space',
+      },
+      {
+        OS: 'Windows 7/8/10 64-bit',
+        processor: '3.0+ GHz Quad-core',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 1060 / AMD Radeon RX 470',
+        directX: 'Version 11',
+        storage: '20 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'thewitcher3',
+    title: 'The Witcher 3: Wild Hunt',
+    price: '17.99',
+    details: {
+      genre: 'Action, RPG',
+      releaseDate: '19 May 2015',
+      developer: 'CD Projekt Red',
+      publisher: 'CD Projekt Red',
+      description:
+        'Embark on an epic quest as Geralt of Rivia in The Witcher 3: Wild Hunt. Explore a vast open world, make impactful choices, and face formidable creatures in this dark fantasy RPG. With its immersive storytelling, rich characters, and breathtaking visuals, The Witcher 3 offers an unforgettable gaming experience.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/8/10 (64-bit)',
+        processor: 'Intel Core i5-2500K 3.3 GHz / AMD Phenom II X4 940',
+        memory: '6 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 660 / AMD Radeon HD 7870',
+        directX: 'Version 11',
+        storage: '50 GB available space',
+      },
+      {
+        OS: 'Windows 7/8/10 (64-bit)',
+        processor: 'Intel Core i5-7400 / Ryzen 5 1600',
+        memory: '8 GB RAM',
+        graphics: 'Nvidia GTX 1070 / Radeon RX 480',
+        directX: 'Version 12',
+        storage: '50 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'png',
+      third: 'png',
+      fourth: 'png',
+    },
+  },
+  {
+    id: 'doometernal',
+    title: 'DOOM Eternal',
+    price: '29.95',
+    details: {
+      genre: 'Shooter, Action',
+      releaseDate: '20 Mar 2020',
+      developer: 'id Software',
+      publisher: 'Bethesda Softworks',
+      description:
+        'Prepare for a relentless demon-slaying experience in DOOM Eternal. As the Doom Slayer, unleash your fury and fight through hordes of demonic creatures from Hell. With its fast-paced gameplay, brutal weapons, and pulse-pounding soundtrack, DOOM Eternal is the epitome of high-octane FPS action.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/10 (64-bit)',
+        processor: 'Intel Core i5 @ 3.3 GHz / AMD Ryzen 3 @ 3.1 GHz',
+        memory: '8 GB RAM',
+        graphics:
+          'NVIDIA GeForce GTX 1050Ti (4GB), GTX 1060 (3GB), GTX 1650 (4GB) or AMD Radeon R9 280(3GB), AMD Radeon R9 290 (4GB), RX 470 (4GB)',
+        directX: 'Version 11',
+        storage: '80 GB available space',
+      },
+      {
+        OS: 'Windows 10 (64-bit)',
+        processor: 'Intel Core i7-6700K / AMD Ryzen 7 1800X',
+        memory: '8 GB RAM',
+        graphics:
+          'NVIDIA GeForce GTX 1060 (6GB), NVIDIA GeForce 970 (4GB), AMD RX 480 (8GB)',
+        directX: 'Version 11',
+        storage: '80 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpeg',
+      second: 'jpeg',
+      third: 'jpg',
+      fourth: 'jpeg',
+    },
+  },
+  {
+    id: 'horizonzerodawn',
+    title: 'Horizon Zero Dawn',
+    price: '74.95',
+    details: {
+      genre: 'Action, Adventure, RPG',
+      releaseDate: '7 Aug 2020',
+      developer: 'Guerrilla',
+      publisher: 'PlayStation PC LLC',
+      description:
+        'Embark on an unforgettable journey in Horizon Zero Dawn. Play as Aloy, a skilled hunter, and explore a post-apocalyptic world dominated by robotic creatures. Uncover the truth of your past and discover the secrets of this lush, vibrant world. With its breathtaking visuals and gripping storyline, Horizon Zero Dawn offers a unique and immersive gaming experience.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10 (64-bit)',
+        processor: 'Intel Core i5-2500K / AMD FX 6300',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 780 / AMD Radeon R9 290',
+        directX: 'Version 12',
+        storage: '100 GB available space',
+      },
+      {
+        OS: 'Windows 10 (64-bit)',
+        processor: 'Intel Core i7-4770K / AMD Ryzen 5 1500X',
+        memory: '16 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 1060 / AMD Radeon RX 580',
+        directX: 'Version 12',
+        storage: '100 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'terraria',
+    title: 'Terraria',
+    price: '9.99',
+    details: {
+      genre: 'Action, Adventure, RPG',
+      releaseDate: '16 May 2011',
+      developer: 'Re-Logic',
+      publisher: 'Re-Logic',
+      description:
+        'Dig, Fight, Explore, Build: The very world is at your fingertips as you fight for survival, fortune, and glory. Will you delve deep into cavernous expanses in search of treasure and raw materials with which to craft ever-evolving gear, machinery, and aesthetics? Perhaps you will choose instead to seek out ever-greater foes to test your mettle in combat? Maybe you will decide to construct your own city to house the host of mysterious allies you may encounter along your travels? In the World of Terraria, the choice is yours!',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows XP/Vista/7/8/10',
+        processor: '2.0 GHz',
+        memory: '2.5 GB RAM',
+        graphics: '128MB Video Memory, capable of Shader Model 2.0+',
+        directX: 'Version 9.0c',
+        storage: '200 MB available space',
+      },
+      {
+        OS: 'Windows 7, 8/8.1, 10',
+        processor: 'Dual Core 3.0 Ghz',
+        memory: '4 GB RAM',
+        graphics: '256MB Video Memory, capable of Shader Model 2.0+',
+        directX: 'Version 9.0c',
+        storage: '200 MB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'skyrim',
+    title: 'The Elder Scrolls V: Skyrim Special Edition',
+    price: '54.95',
+    details: {
+      genre: 'Action, Adventure, Singleplayer, RPG',
+      releaseDate: '28 Oct 2016',
+      developer: 'Bethesda Game Studios',
+      publisher: 'Bethesda Softworks',
+      description:
+        'Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features like remastered art and effects, volumetric god rays, dynamic depth of field, screen-space reflections, and more. Skyrim Special Edition also brings the full power of mods to the PC and consoles. New quests, environments, characters, dialogue, armor, weapons and more - with Mods, there are no limits to what you can experience.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/8.1/10 (64-bit Version)',
+        processor: 'Intel i5-750/AMD Phenom II X4-945',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GTX 470 1GB /AMD HD 7870 2GB',
+        directX: 'Version 11',
+        storage: '12 GB available space',
+      },
+      {
+        OS: 'Windows 7/8.1/10 (64-bit Version)',
+        processor: 'Intel i5-2400/AMD FX-8320',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GTX 780 3GB /AMD R9 290 4GB',
+        directX: 'Version 11',
+        storage: '12 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'portal2',
+    title: 'Portal 2',
+    price: '9.99',
+    details: {
+      genre: 'Puzzle',
+      releaseDate: '19 Apr 2011',
+      developer: 'Valve',
+      publisher: 'Valve',
+      description:
+        'Portal 2 draws from the award-winning formula of innovative gameplay, story, and music that earned the original Portal over 70 industry accolades and created a cult following.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/Vista/XP',
+        processor: '3.0 GHz P4, Dual Core 2.0 (or higher)',
+        memory: '2 GB RAM',
+        graphics: 'NVIDIA GeForce 7600 / ATI Radeon X800',
+        directX: 'Version 9.0c',
+        storage: '8 GB available space',
+      },
+      {
+        OS: 'Windows 7/Vista/XP',
+        processor: '3.0 GHz P4, Dual Core 2.0 (or higher)',
+        memory: '2 GB RAM',
+        graphics: 'NVIDIA GeForce 7600 / ATI Radeon X800',
+        directX: 'Version 9.0c',
+        storage: '8 GB available space',
+      },
+    ],
+    images: {
+      first: 'png',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'bioshockinfinite',
+    title: 'BioShock Infinite',
+    price: '39.95',
+    details: {
+      genre: 'Action, Shooter, Singleplayer',
+      releaseDate: '26 Mar 2013',
+      developer: 'Irrational Games, Virtual Programming (Linux)',
+      publisher: '2K',
+      description:
+        'Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia. Forced to trust one another, Booker and Elizabeth form a powerful bond during their daring escape. Together, they learn to harness an expanding arsenal of weapons and abilities, as they fight on zeppelins in the clouds, along high-speed Sky-Lines, and down in the streets of Columbia, all while surviving the threats of the air-city and uncovering its dark secret.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows Vista/7/8',
+        processor: 'Intel Core 2 Duo @ 2.4 GHz / AMD Athlon X2 @ 2.7 GHz',
+        memory: '2 GB RAM',
+        graphics: 'NVIDIA GeForce 8800 GT / ATI Radeon HD 3870',
+        directX: 'Version 11',
+        storage: '20 GB available space',
+      },
+      {
+        OS: 'Windows 7 Service Pack 1 64-bit',
+        processor: 'Quad Core Processor',
+        memory: '4 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 560 / AMD Radeon HD 6950',
+        directX: 'Version 11',
+        storage: '30 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'arkhamknight',
+    title: 'Batman: Arkham Knight',
+    price: '19.99',
+    details: {
+      genre: 'Action, Adventure, Singleplayer',
+      releaseDate: '23 Jun 2015',
+      developer: 'Rocksteady Studios',
+      publisher: 'Warner Bros. Interactive Entertainment',
+      description:
+        'Batman™: Arkham Knight brings the award-winning Arkham trilogy from Rocksteady Studios to its epic conclusion. Developed exclusively for New-Gen platforms, Batman: Arkham Knight introduces Rocksteadys uniquely designed version of the Batmobile. The highly anticipated addition of this legendary vehicle, combined with the acclaimed gameplay of the Arkham series, offers gamers the ultimate and complete Batman experience as they tear through the streets and soar across the skyline of the entirety of Gotham City. In this explosive finale, Batman faces the ultimate threat against the city that he is sworn to protect, as Scarecrow returns to unite the super criminals of Gotham and destroy the Batman forever.',
+    },
+    systemReqs: [
+      {
+        OS: 'Win 7 SP1, Win 8.1 (64-bit Operating System Required)',
+        processor:
+          'Intel Core i5-750, 2.67 GHz / AMD Phenom II X4 965, 3.4 GHz',
+        memory: '6 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 660 / AMD Radeon HD 7870',
+        directX: 'Version 11',
+        storage: '45 GB available space',
+      },
+      {
+        OS: 'Win 7 SP1, Win 8.1 (64-bit Operating System Required)',
+        processor: 'Intel Core i7-3770, 3.4 GHz | AMD FX-8350, 4.0 GHz',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GeForce GTX 760 - | AMD Radeon HD 7950',
+        directX: 'Version 11',
+        storage: '55 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'eldenring',
+    title: 'ELDEN RING',
+    price: '89.95',
+    details: {
+      genre: 'RPG, Action',
+      releaseDate: '23 Feb 2022',
+      developer: 'FromSoftware Inc.',
+      publisher: 'FromSoftware Inc., Bandai Namco Entertainment',
+      description:
+        'ELDEN RING developed by FromSoftware, Inc. and BANDAI NAMCO Entertainment Inc., is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R.R. Martin. Danger and discovery lurk around every corner in FromSoftware’s largest game to-date.',
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10',
+        processor: 'INTEL CORE I5-8400 or AMD RYZEN 3 3300X',
+        memory: '12 GB RAM',
+        graphics: 'NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB',
+        directX: 'Version 12',
+        storage: '60 GB available space',
+      },
+      {
+        OS: 'Windows 10/11',
+        processor: 'INTEL CORE I7-8700K or AMD RYZEN 5 3600X',
+        memory: '16 GB RAM',
+        graphics: 'NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB',
+        directX: 'Version 12',
+        storage: '60 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
     },
   },
 ];

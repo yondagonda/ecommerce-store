@@ -8,7 +8,7 @@ export const Filters = () => {
   return (
     <div
       className="hidden sm:block pt-14 px-5
-      md:px-10"
+      md:px-10 font-secondary "
     >
       <div className="flex flex-col gap-2 mb-4 md:gap-4 min-w-[23%] md:max-w-[180px]">
         <div className="text-2xl font-bold">Filters</div>
