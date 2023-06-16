@@ -1,9 +1,13 @@
+import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
 export const Cart = ({
   cart,
   setCart,
   setIsCartOpen,
   setSelectedGame,
   total,
+  isCartOpen,
 }) => {
   console.log(cart);
 
@@ -14,54 +18,97 @@ export const Cart = ({
   };
 
   return (
-    <>
-      <div
-        className={`negativeSidebar fixed left-0 h-full bg-zinc-800 brightness-50 
-        opacity-70 z-10`}
-      ></div>
+    <AnimatePresence>
+      {isCartOpen && (
+        <>
+          <div
+            className={`negativeSidebar fixed left-0 h-full bg-zinc-800 brightness-50 
+              opacity-70 z-10`}
+          ></div>
 
-      <div
-        className="fixed right-0 h-full bg-zinc-800
-        w-[70%] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] z-10 p-6 
-        sidebar"
-      >
-        <div className="text-slate-50 flex flex-col justify-between h-full">
-          <div>
-            <div className="flex justify-between mb-4">
-              <div className="text-3xl font-secondary">My Cart</div>
-              <button onClick={() => setIsCartOpen(false)}>Close</button>
-            </div>
+          <motion.div
+            key="cart"
+            className="fixed right-0 h-full bg-zinc-800 z-10"
+            initial={{ width: '0px' }}
+            animate={{
+              width: 'auto',
+              transition: {
+                width: {
+                  duration: 0.4,
+                },
+              },
+            }}
+            exit={{
+              width: 0,
+              transition: {
+                width: {
+                  duration: 0.4,
+                },
+              },
+            }}
+          >
+            <div
+              className="text-slate-50 flex flex-col justify-between h-full 
+          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px]"
+            >
+              <div>
+                <div className="flex justify-between mb-4">
+                  <div className="text-3xl font-secondary">My Cart</div>
+                  <button onClick={() => setIsCartOpen(false)}>Close</button>
+                </div>
 
-            <div className="flex flex-col gap-3">
-              {cart.map((cartItem) => {
-                return (
-                  <div
-                    key={cartItem.id}
-                    className="flex justify-between bg-zinc-700 p-4 rounded-xl"
-                  >
-                    <div className="font-bold">{cartItem.title}</div>
-                    <div className="flex items-center gap-2.5">
-                      <div>${cartItem.price}</div>
-                      <button
-                        className="px-2 bg-zinc-800 rounded-full"
-                        onClick={(e) => onDelete(cartItem.id)}
-                      >
-                        x
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
+                <div className="flex flex-col gap-3">
+                  <AnimatePresence>
+                    {cart.map((cartItem, i) => {
+                      return (
+                        <motion.div
+                          variants={{
+                            hidden: {
+                              opacity: 0,
+                              x: 50,
+                            },
+                            visible: (i) => ({
+                              opacity: 1,
+                              x: 0,
+                              transition: { delay: i * 0.1 },
+                            }),
+                            removed: {
+                              opacity: 0,
+                            },
+                          }}
+                          custom={i}
+                          initial="hidden"
+                          animate="visible"
+                          exit="removed"
+                          key={cartItem.id}
+                          className="flex justify-between bg-zinc-700 p-4 rounded-xl"
+                        >
+                          <div className="font-bold">{cartItem.title}</div>
+                          <div className="flex items-center gap-2.5">
+                            <div>${cartItem.price}</div>
+                            <button
+                              className="px-2 bg-zinc-800 rounded-full"
+                              onClick={(e) => onDelete(cartItem.id)}
+                            >
+                              x
+                            </button>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </AnimatePresence>
+                </div>
+              </div>
+              <div className="flex justify-around items-center  font-secondary">
+                <div className="text-xl">
+                  {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
+                </div>
+                <div className="text-2xl cursor-pointer">Checkout ➜</div>
+              </div>
             </div>
-          </div>
-          <div className="flex justify-around items-center  font-secondary">
-            <div className="text-xl">
-              {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
-            </div>
-            <div className="text-2xl">Checkout ➜</div>
-          </div>
-        </div>
-      </div>
-    </>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 };

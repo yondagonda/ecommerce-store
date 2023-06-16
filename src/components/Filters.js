@@ -23,7 +23,10 @@ export const Filters = () => {
       <div className="flex flex-col gap-1.5 md:gap-3">
         <div className="text-lg font-bold">Genres</div>
         <div className="flex flex-col gap-2 md:gap-4 items-start">
-          <button onClick={(e) => setCurrentFilter(e.target.innerText)}>
+          <button
+            className="hover:text-zinc-400"
+            onClick={(e) => setCurrentFilter(e.target.innerText)}
+          >
             Action
           </button>
           <button onClick={(e) => setCurrentFilter(e.target.innerText)}>

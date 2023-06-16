@@ -963,7 +963,7 @@ export const gameDataLibrary = [
   },
   {
     id: 'arkhamknight',
-    title: 'Batman: Arkham Knight',
+    title: 'Batman™: Arkham Knight',
     price: '19.99',
     details: {
       genre: 'Action, Adventure, Singleplayer',
@@ -1027,6 +1027,155 @@ export const gameDataLibrary = [
         graphics: 'NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB',
         directX: 'Version 12',
         storage: '60 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'arkhamorigins',
+    title: 'Batman™: Arkham Origins',
+    price: '19.95',
+    details: {
+      genre: 'Adventure, Action',
+      releaseDate: '25 Oct 2013',
+      developer: 'WB Games Montreal, Splash Damage',
+      publisher: 'Warner Bros. Interactive Entertainment',
+      description:
+        'Batman™: Arkham Origins is the next installment in the blockbuster Batman: Arkham videogame franchise. Developed by WB Games Montréal, the game features an expanded Gotham City and introduces an original prequel storyline set several years before the events of Batman: Arkham Asylum and Batman: Arkham City, the first two critically acclaimed games of the franchise. Taking place before the rise of Gotham City’s most dangerous criminals, the game showcases a young and unrefined Batman as he faces a defining moment in his early career as a crime fighter that sets his path to becoming the Dark Knight.',
+    },
+    systemReqs: [
+      {
+        OS: '32-bit: Vista, Win 7, Win 8',
+        processor: 'Intel Core 2 Duo, 2.4 GHz / AMD Athlon X2, 2.8 GHz',
+        memory: '2 GB RAM',
+        graphics:
+          'NVIDIA GeForce 8800 GTS / AMD Radeon HD 3850 or better with 512 MB of VRAM',
+        directX: 'Version 9',
+        storage: '20 GB available space',
+      },
+      {
+        OS: '32-bit: Vista, Win 7, Win 8/11',
+        processor:
+          'Intel Core i5-750, 2.67 GHz / AMD Phenom II X4 965, 3.4 GHz',
+        memory: '4 GB RAM',
+        graphics:
+          'NVIDIA GeForce GTX 560 / AMD Radeon HD 6950 or better with 768 MB+ of VRAM (DirectX 11 Compatible)',
+        directX: 'Version 11',
+        storage: '20 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'spidermanremastered',
+    title: `Marvel's Spider-Man Remastered`,
+    price: '63.95',
+    details: {
+      genre: 'Adventure, Action, Singleplayer',
+      releaseDate: '13 Aug 2022',
+      developer: 'Insomniac Games, Nixxes Software',
+      publisher: 'PlayStation PC LLC',
+      description: `Developed by Insomniac Games in collaboration with Marvel, and optimized for PC by Nixxes Software, Marvel's Spider-Man Remastered on PC introduces an experienced Peter Parker who's fighting big crime and iconic villains in Marvel's New York. At the same time, he's struggling to balance his chaotic personal life and career while the fate of Marvel's New York rests upon his shoulders.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 10 64-bit',
+        processor: 'Intel Core i3-4160, 3.6 GHz or AMD equivalent',
+        memory: '8 GB RAM',
+        graphics: 'NVIDIA GTX 950 or AMD Radeon RX 470',
+        directX: 'Version 12',
+        storage: '75 GB available space',
+      },
+      {
+        OS: 'Windows 10 64-bit/11',
+        processor: 'Intel Core i5-4670, 3.4 Ghz or AMD Ryzen5 1600, 3.2 Ghz',
+        memory: '16 GB RAM',
+        graphics: 'NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB',
+        directX: 'Version 12',
+        storage: '75 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'payday2',
+    title: `PAYDAY 2`,
+    price: '14.50',
+    details: {
+      genre: 'Action, Shooter, RPG',
+      releaseDate: '13 Aug 2013',
+      developer: 'OVERKILL - a Starbreeze Studio.',
+      publisher: 'Starbreeze Publishing AB',
+      description: `PAYDAY 2 is an action-packed, four-player co-op shooter that once again lets gamers don the masks of the original PAYDAY crew - Dallas, Hoxton, Wolf and Chains - as they descend on Washington DC for an epic crime spree.
+        The CRIMENET network offers a huge range of dynamic contracts, and players are free to choose anything from small-time convenience store hits or kidnappings, to big league cyber-crime or emptying out major bank vaults for that epic PAYDAY. While in DC, why not participate in the local community, and run a few political errands?`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7',
+        processor: '2 GHz Intel Dual Core Processor',
+        memory: '4 GB RAM',
+        graphics: 'Nvidia & AMD (512MB VRAM)',
+        directX: 'Version 9',
+        storage: '83 GB available space',
+      },
+      {
+        OS: 'Windows 10',
+        processor: '2.3 GHz Intel Quad Core Processor',
+        memory: '8 GB RAM',
+        graphics: 'Nvidia & AMD (1GB VRAM)',
+        directX: 'Version 9',
+        storage: '83 GB available space',
+      },
+    ],
+    images: {
+      first: 'jpg',
+      second: 'jpg',
+      third: 'jpg',
+      fourth: 'jpg',
+    },
+  },
+  {
+    id: 'borderlands3',
+    title: `Borderlands 3`,
+    price: '89.95',
+    details: {
+      genre: 'Action, Shooter, RPG',
+      releaseDate: '14 Mar 2020',
+      developer: 'Gearbox Software',
+      publisher: '2K',
+      description: `The original shooter-looter returns, packing bazillions of guns and an all-new mayhem-fueled adventure! Blast through new worlds and enemies as one of four brand new Vault Hunters – the ultimate treasure-seeking badasses of the Borderlands, each with deep skill trees, abilities, and customization. Play solo or join with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.`,
+    },
+    systemReqs: [
+      {
+        OS: 'Windows 7/10 (latest service pack)',
+        processor: 'AMD FX-8350 or Intel i5-3570',
+        memory: '6 GB RAM',
+        graphics: 'AMD Radeon™ HD 7970 or NVIDIA GeForce GTX 680 2 GB',
+        directX: 'Version 11',
+        storage: '75 GB available space',
+      },
+      {
+        OS: 'Windows 7/10 (latest service pack)',
+        processor: 'AMD Ryzen™ 5 2600 (Intel i7-4770)',
+        memory: '16 GB RAM',
+        graphics: 'AMD Radeon™ RX 590 or NVIDIA GeForce GTX 1060 6GB',
+        directX: 'Version 12',
+        storage: '75 GB available space',
       },
     ],
     images: {

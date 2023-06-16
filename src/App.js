@@ -1,13 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Browse } from './components/Browse';
 import { GamePage } from './components/GamePage';
 import { Navbar } from './components/Navbar';
 import { BackgroundVideo } from './components/BackgroundVideo';
-import { useState } from 'react';
 import { Cart } from './components/Cart';
 import { gameDataLibrary } from './components/gameDataLibrary';
 import { Notfound } from './components/Notfound';
@@ -16,9 +15,7 @@ export const CartContext = React.createContext();
 export const SearchContext = React.createContext();
 
 // TODO:
-// ADD MORE GAMES INTO THE DB
-// clean up/finalise error 404 page
-
+// get rid of isbrowseopen, backround should completely turn black all together
 // Then, only after doing all the previous, sort out media queries for everything
 
 function App() {
@@ -31,7 +28,9 @@ function App() {
   const [wishlist, setWishlist] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [isBrowseOpen, setIsBrowseOpen] = useState(false);
+  const [isBrowseOpen, setIsBrowseOpen] = useState(false); // can we change this to a Ref?
+
+  const hasRenderedGameListRef = useRef(false);
 
   const matches = [];
   let flag = false;
@@ -44,7 +43,6 @@ function App() {
         if (match) {
           flag = true;
           setCurrentFilter('Search');
-          console.log(game.id);
           matches.push(game.id);
         }
         setSearchResults(matches);
@@ -126,31 +124,29 @@ function App() {
     <div className="App">
       <BackgroundVideo />
 
-      {isCartOpen ? (
-        <Cart
-          setIsCartOpen={setIsCartOpen}
-          cart={cart}
-          setCart={setCart}
-          setSelectedGame={setSelectedGame}
-          total={total}
-          isCartOpen={isCartOpen}
-        />
-      ) : null}
+      <Cart
+        setIsCartOpen={setIsCartOpen}
+        cart={cart}
+        setCart={setCart}
+        setSelectedGame={setSelectedGame}
+        total={total}
+        isCartOpen={isCartOpen}
+      />
+
       <SearchContext.Provider
         value={{
           searchInput,
           setSearchInput,
           setCurrentFilter,
           onExecuteSearch,
+          setIsCartOpen,
+          isCartOpen,
+          isBrowseOpen,
+          setIsBrowseOpen,
+          cart,
         }}
       >
-        <Navbar
-          setIsCartOpen={setIsCartOpen}
-          isCartOpen={isCartOpen}
-          setCurrentFilter={setCurrentFilter}
-          isBrowseOpen={isBrowseOpen}
-          setIsBrowseOpen={setIsBrowseOpen}
-        />
+        <Navbar />
       </SearchContext.Provider>
 
       <CartContext.Provider
@@ -171,6 +167,7 @@ function App() {
           setSearchResults,
           setSearchInput,
           setIsBrowseOpen,
+          hasRenderedGameListRef,
         }}
       >
         <Routes>

@@ -1,20 +1,24 @@
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
 import { Filters } from './Filters';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { GameList } from './GameList';
 import { CartContext } from '../App';
 import { useContext } from 'react';
+import { motion } from 'framer-motion';
 
 export const Browse = () => {
   const { setCurrentFilter, currentFilter, setSearchInput, setIsBrowseOpen } =
     useContext(CartContext);
 
   return (
-    <div
+    <motion.div
       className="text-slate-50 bg-zinc-900 min-h-screen h-full overflow-[none]
-    flex"
+    flex "
       onLoad={() => setIsBrowseOpen(true)}
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
+      // viewport={{ once: true }}
     >
       <Filters />
 
@@ -42,6 +46,6 @@ export const Browse = () => {
         </div>
         <GameList />
       </div>
-    </div>
+    </motion.div>
   );
 };

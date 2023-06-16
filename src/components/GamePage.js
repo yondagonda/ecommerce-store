@@ -6,6 +6,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../App';
 import addWL from '../img/symbols/addWL.svg';
 import removeWL from '../img/symbols/removeWL.svg';
+import { Notfound } from './Notfound';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const GamePage = () => {
   const { id } = useParams();
@@ -18,23 +20,28 @@ export const GamePage = () => {
 };
 
 const RenderGamePageInfo = ({ id, onAddToCart }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const {
     setWishlist,
     setAddToWish,
     wishlist,
     onWishlistRemove,
     onWishlistAdd,
+    setIsBrowseOpen,
   } = useContext(CartContext);
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleOpen = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  let isGameFound = false;
+
   return (
-    <>
+    <div onLoad={() => setIsBrowseOpen(true)}>
       {gameDataLibrary.map((game) => {
         if (game.id === id) {
+          isGameFound = true;
           return (
             <div
               key={game.id}
@@ -115,85 +122,126 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="text-base bg-zinc-700 rounded-b-2xl font-bold"
-                      onClick={handleOpen}
-                    >
-                      <div className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer hover:text-slate-400">
-                        See Specifications {dropdownOpen ? '🠗' : '➜'}
+
+                    <div className="text-base bg-zinc-700 rounded-b-2xl font-bold">
+                      <div
+                        className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer hover:text-slate-400"
+                        onClick={handleOpen}
+                      >
+                        {dropdownOpen ? 'Close' : 'See'} Specifications{' '}
+                        {dropdownOpen ? '🠗' : '➜'}
                       </div>
-                      {dropdownOpen ? (
-                        <div
-                          className="text-sm font-thin flex flex-col sm:px-3 sm:pb-1 md:pb-2
-                        md:flex-row md:justify-center md:gap-2 lg:pb-4 lg:gap-7 px-2 py-0.5"
-                        >
-                          <div>
-                            <div className="font-bold text-red-400">
-                              {' '}
-                              Minimum Requirements:
-                            </div>
-                            <div>
-                              <span className="text-gray-400">OS: </span>
-                              {game.systemReqs[0].OS}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Processor: </span>
-                              {game.systemReqs[0].processor}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Memory: </span>
-                              {game.systemReqs[0].memory}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Graphics: </span>
-                              {game.systemReqs[0].graphics}
-                            </div>
-                            {game.systemReqs[0].directX ? (
-                              <div>
-                                <span className="text-gray-400">DirectX: </span>
-                                {game.systemReqs[0].directX}
+                      <AnimatePresence mode="wait">
+                        {dropdownOpen && (
+                          <motion.div
+                            key={game.id}
+                            initial={{ height: '0px', opacity: 0 }}
+                            animate={{
+                              height: 'auto',
+                              opacity: 1,
+                              transition: {
+                                height: {
+                                  duration: 0.4,
+                                },
+                                opacity: {
+                                  duration: 0.25,
+                                  delay: 0.35,
+                                },
+                              },
+                            }}
+                            exit={{
+                              height: 0,
+                              opacity: 0,
+                              transition: {
+                                height: {
+                                  duration: 0.4,
+                                },
+                                opacity: {
+                                  duration: 0.07,
+                                },
+                              },
+                            }}
+                            className="text-sm font-thin flex flex-col sm:px-3
+                        md:flex-row md:justify-center md:gap-2 lg:gap-7 px-2"
+                          >
+                            <div className="sm:mb-1 md:mb-2 lg:mb-4">
+                              <div className="font-bold text-red-400">
+                                {' '}
+                                Minimum Requirements:
                               </div>
-                            ) : null}
-                            <div>
-                              <span className="text-gray-400">Storage: </span>
-                              {game.systemReqs[0].storage}
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-bold text-green-400">
-                              Recommended:
-                            </div>
-                            <div>
-                              <span className="text-gray-400">OS: </span>
-                              {game.systemReqs[1].OS}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Processor: </span>
-                              {game.systemReqs[1].processor}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Memory: </span>
-                              {game.systemReqs[1].memory}
-                            </div>
-                            <div>
-                              <span className="text-gray-400">Graphics: </span>
-                              {game.systemReqs[1].graphics}
-                            </div>
-                            {game.systemReqs[1].directX ? (
                               <div>
-                                <span className="text-gray-400">DirectX: </span>
-                                {game.systemReqs[1].directX}
+                                <span className="text-gray-400">OS: </span>
+                                {game.systemReqs[0].OS}
                               </div>
-                            ) : null}
-                            <div>
-                              <span className="text-gray-400">Storage: </span>
-                              {game.systemReqs[1].storage}
+                              <div>
+                                <span className="text-gray-400">
+                                  Processor:{' '}
+                                </span>
+                                {game.systemReqs[0].processor}
+                              </div>
+                              <div>
+                                <span className="text-gray-400">Memory: </span>
+                                {game.systemReqs[0].memory}
+                              </div>
+                              <div>
+                                <span className="text-gray-400">
+                                  Graphics:{' '}
+                                </span>
+                                {game.systemReqs[0].graphics}
+                              </div>
+                              {game.systemReqs[0].directX ? (
+                                <div>
+                                  <span className="text-gray-400">
+                                    DirectX:{' '}
+                                  </span>
+                                  {game.systemReqs[0].directX}
+                                </div>
+                              ) : null}
+                              <div>
+                                <span className="text-gray-400">Storage: </span>
+                                {game.systemReqs[0].storage}
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      ) : (
-                        ''
-                      )}
+                            <div className="sm:mb-1 md:mb-2 lg:mb-4">
+                              <div className="font-bold text-green-400">
+                                Recommended:
+                              </div>
+                              <div>
+                                <span className="text-gray-400">OS: </span>
+                                {game.systemReqs[1].OS}
+                              </div>
+                              <div>
+                                <span className="text-gray-400">
+                                  Processor:{' '}
+                                </span>
+                                {game.systemReqs[1].processor}
+                              </div>
+                              <div>
+                                <span className="text-gray-400">Memory: </span>
+                                {game.systemReqs[1].memory}
+                              </div>
+                              <div>
+                                <span className="text-gray-400">
+                                  Graphics:{' '}
+                                </span>
+                                {game.systemReqs[1].graphics}
+                              </div>
+                              {game.systemReqs[1].directX ? (
+                                <div>
+                                  <span className="text-gray-400">
+                                    DirectX:{' '}
+                                  </span>
+                                  {game.systemReqs[1].directX}
+                                </div>
+                              ) : null}
+                              <div>
+                                <span className="text-gray-400">Storage: </span>
+                                {game.systemReqs[1].storage}
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
                 </div>
@@ -202,7 +250,8 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
           );
         }
       })}
-    </>
+      {isGameFound === false ? <Notfound darken={true} /> : null}
+    </div>
   );
 };
 

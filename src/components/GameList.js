@@ -1,97 +1,88 @@
 import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import { CartContext } from '../App';
-import addWL from '../img/symbols/addWL.svg';
-import removeWL from '../img/symbols/removeWL.svg';
+import { GameCard } from './GameCard';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const GameList = () => {
-  const { currentFilter, wishlist, searchResults, setSearchResults } =
+  const { currentFilter, wishlist, searchResults, hasRenderedGameListRef } =
     useContext(CartContext);
+
+  useEffect(() => {
+    hasRenderedGameListRef.current = true;
+  }, []);
 
   return (
     <div
       className="bg-zinc-900 grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4
         xs:grid-cols-2 gap-3 sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3 glist items-end"
     >
-      {gameDataLibrary.map((game) => {
-        if (
-          game.details.genre.includes(currentFilter) ||
-          currentFilter === undefined
-        ) {
-          return (
-            <div className="border border-[transparent]" key={game.id}>
-              <GameCardRender game={game} />
-            </div>
-          );
-        }
-        if (currentFilter === 'Wishlist') {
-          if (wishlist.includes(game.id)) {
+      <AnimatePresence>
+        {gameDataLibrary.map((game, i) => {
+          if (
+            game.details.genre.includes(currentFilter) ||
+            currentFilter === undefined
+          ) {
             return (
-              <div className="border border-[transparent]" key={game.id}>
-                <GameCardRender game={game} />
-              </div>
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: -30,
+                  },
+                  visible: (i) => ({
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: i * 0.08 },
+                  }),
+                }}
+                custom={i}
+                initial={hasRenderedGameListRef.current ? 'visible' : 'hidden'}
+                animate="visible"
+                className="border border-[transparent]"
+                key={game.id}
+              >
+                <GameCard game={game} />
+              </motion.div>
             );
           }
-        }
-        if (currentFilter === 'Search') {
-          if (searchResults.includes(game.id)) {
-            return (
-              <div className="border border-[transparent]" key={game.id}>
-                <GameCardRender game={game} />
-              </div>
-            );
+          if (currentFilter === 'Wishlist') {
+            if (wishlist.includes(game.id)) {
+              return (
+                <motion.div
+                  className="border border-[transparent]"
+                  key={game.id}
+                >
+                  <GameCard game={game} />
+                </motion.div>
+              );
+            }
           }
-        }
-        if (currentFilter === 'Error Page') {
-          if (searchResults.includes(game.id)) {
-            return (
-              <div className="border border-[transparent]" key={game.id}>
-                <GameCardRender />
-                {/* Maybe render an error page here instead? or a 'no results found' page etc.  */}
-              </div>
-            );
+          if (currentFilter === 'Search') {
+            if (searchResults.includes(game.id)) {
+              return (
+                <motion.div
+                  className="border border-[transparent]"
+                  key={game.id}
+                >
+                  <GameCard game={game} />
+                </motion.div>
+              );
+            }
           }
-        }
-      })}
+          // if (currentFilter === 'Error Page') {
+          //   if (searchResults.includes(game.id)) {
+          //     return (
+          //       <div className="border border-[transparent]" key={game.id}>
+          //         <GameCardRender />
+          //         {/* Maybe render an error page here instead? or a 'no results found' page etc.  */}
+          //       </div>
+          //     );
+          //   }
+          // }
+        })}
+      </AnimatePresence>
     </div>
-  );
-};
-
-export const GameCardRender = ({ game }) => {
-  const { wishlist, onWishlistRemove, onWishlistAdd } = useContext(CartContext);
-
-  return (
-    <Link to={`/ecommerce-store/games/${game.id}`}>
-      <img
-        src={require(`../img/${game.id}/img1.${game.images.first}`)}
-        alt={game.title}
-        className="rounded-t-2xl h-[100%]"
-      />
-      <div className="bg-zinc-800 rounded-b-2xl h-24 md:h-28 p-4">
-        <div className="flex justify-between">
-          <div className="text-sm md:text-base ">${game.price}</div>
-
-          {wishlist.includes(game.id) ? (
-            <img
-              onClick={(e) => onWishlistRemove(e, game.id)}
-              src={removeWL}
-              alt="heart"
-              className="h-5 cursor-pointer"
-            />
-          ) : (
-            <img
-              onClick={(e) => onWishlistAdd(e, game.id)}
-              src={addWL}
-              alt="heart"
-              className="h-5 cursor-pointer"
-            />
-          )}
-        </div>
-        <div className="text-base md:text-lg lg:text-xl font-bold">
-          {game.title}
-        </div>
-      </div>
-    </Link>
   );
 };
