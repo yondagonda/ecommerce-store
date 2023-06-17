@@ -56,7 +56,7 @@ export const Cart = ({
                   </div>
                   <button
                     onClick={() => setIsCartOpen(false)}
-                    className="hover:text-blue-200 duration-100"
+                    className="hover:text-blue-200 duration-100 2xl:text-lg"
                   >
                     Close
                   </button>
@@ -117,7 +117,7 @@ export const Cart = ({
                 <div className="text-lg sm:text-xl 2xl:text-2xl">
                   {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
                 </div>
-                <div className="text-xl sm:text-2xl 2xl:text-3xl cursor-pointer">
+                <div className="text-xl sm:text-2xl  cursor-pointer">
                   Checkout ➜
                 </div>
               </div>

@@ -109,6 +109,27 @@
   }
 }
 
+@media only screen and (max-width: 440px) {
+  .carousel-container {
+    height: 230px !important;
+    width: 380px !important;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .carousel-container {
+    height: 220px !important;
+    width: 345px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .carousel-container {
+    height: 200px !important;
+    width: 320px !important;
+  }
+}
+
 .negativeSidebar {
   width: 100vw;
 }

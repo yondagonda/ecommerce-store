@@ -10,6 +10,8 @@ import { Notfound } from './Notfound';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const GamePage = () => {
+  window.scrollTo(0, 0);
+
   const { id } = useParams();
 
   return (
@@ -76,7 +78,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                 >
                   <div
                     className="mt-3 justify-center flex 2xl:justify-between items-center max-w-[1152px] 
-              gap-10 2xl:mt-10 3xl:mt-20 sm:gap-24 lg:gap-32 2xl:gap-[160px] 3xl:gap-[200px]"
+              gap-2 xs:gap-10 sm:gap-24 2xl:mt-10 3xl:mt-20 lg:gap-32 2xl:gap-[160px] 3xl:gap-[200px]"
                   >
                     <Link to="/ecommerce-store/browse">
                       <button
@@ -99,7 +101,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                             </g>
                           </svg>
                         </div>
-                        <div className="pl-2 lg:text-xl 2xl:text-2xl group-hover:text-blue-300">
+                        <div className="pl-2 text-sm xs:text-base lg:text-xl 2xl:text-2xl group-hover:text-blue-300">
                           Store
                         </div>
                       </button>
@@ -147,10 +149,13 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                         )}
                       </div>
 
-                      <div className="bg-zinc-800 rounded-2xl lg:max-w-[900px] mb-8">
+                      <div
+                        className="bg-zinc-800 rounded-2xl lg:max-w-[900px] mb-8
+                      /"
+                      >
                         <div
                           className="grid grid-cols-1 gap-6 md:gap-2 2xl:grid-cols-1 
-                    md:grid-cols-[60%_40%] p-3 sm:p-5"
+                    md:grid-cols-[60%_40%] p-2 xs:p-3 sm:p-5"
                         >
                           <div>
                             <div className="font-bold text-base md:text-lg xl:text-xl">
@@ -198,7 +203,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                             onClick={handleOpen}
                           >
                             {dropdownOpen ? 'Close' : 'See'} Specifications{' '}
-                            {dropdownOpen ? '🡓' : '🡒'}
+                            {dropdownOpen ? '⬇' : '➡'}
                           </div>
                           <AnimatePresence mode="wait">
                             {dropdownOpen && (
