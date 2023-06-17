@@ -133,19 +133,23 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                         <RenderAddToCartButton currentGame={game} />
 
                         {wishlist.includes(game.id) ? (
-                          <img
-                            onClick={(e) => onWishlistRemove(e, game.id)}
-                            src={removeWL}
-                            alt="heart"
-                            className="h-6 cursor-pointer"
-                          />
+                          <motion.div whileTap={{ scale: 0.85 }}>
+                            <img
+                              onClick={(e) => onWishlistRemove(e, game.id)}
+                              src={removeWL}
+                              alt="heart"
+                              className="h-6 cursor-pointer"
+                            />
+                          </motion.div>
                         ) : (
-                          <img
-                            onClick={(e) => onWishlistAdd(e, game.id)}
-                            src={addWL}
-                            alt="heart"
-                            className="h-6 cursor-pointer"
-                          />
+                          <motion.div whileTap={{ scale: 0.85 }}>
+                            <img
+                              onClick={(e) => onWishlistAdd(e, game.id)}
+                              src={addWL}
+                              alt="heart"
+                              className="h-6 cursor-pointer"
+                            />
+                          </motion.div>
                         )}
                       </div>
 

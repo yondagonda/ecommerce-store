@@ -44,15 +44,15 @@ export const Home = () => {
           transition={{
             duration: 0.12,
           }}
-          className="text-center bg-white/20 p-4 rounded-xl backdrop-blur-[2px] w-[94%]
+          className="text-center bg-white/20 p-4 rounded-xl backdrop-blur-[4px] w-[94%]
       xs:w-[400px] sm:w-[550px] lg:w-[650px] 2xl:w-[800px] 3xl:w-[900px] 
       xs:p-6 sm:p-8 2xl:p-12 3xl:p-20 cursor-default"
         >
           {/* ADD IN SIZE XL MEDIA QUERIES LATER  */}
-          <div className="text-4xl font-bold sm:text-6xl lg:text-8xl 2xl:text-[120px] 3xl:text-[140px]">
+          <div className="text-4xl font-bold sm:text-6xl lg:text-8xl 2xl:text-[120px] 3xl:text-[140px] select-none">
             Game Store
           </div>
-          <div className="text-base sm:text-lg lg:text-xl 2xl:text-2xl">
+          <div className="text-base sm:text-lg lg:text-xl 2xl:text-2xl select-none">
             The store where your gaming dreams come true! Discover a curated
             collection of the latest releases, timeless classics, and hidden
             gems. Immerse yourself in captivating adventures, intense battles,
@@ -65,28 +65,32 @@ export const Home = () => {
           transition={{
             duration: 0.12,
           }}
-          className="bg-white/20 p-4 rounded-xl text-center backdrop-blur-[2px] flex flex-col gap-1 
-      items-center w-[94%] sm:flex-row sm:w-[550px] justify-evenly"
+          className="bg-white/20 p-4 rounded-xl text-center backdrop-blur-[4px] flex flex-col gap-1 
+      items-center w-[94%] sm:flex-row sm:w-[550px] justify-evenly select-none"
         >
           <Link to="/ecommerce-store/browse">
             <div
               className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl 
-            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] duration-200 sm:h-10"
+            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200 sm:h-10"
             >
               <img src={rightarrow} className="h-7" alt="right arrow" />
-              <div className="text-zinc-900 font-secondary">Browse</div>
+              <div className="text-zinc-900 font-secondary 2xl:text-xl">
+                Browse
+              </div>
             </div>
           </Link>
           <div
             className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 
             px-10 
-        py-1 w-[220px] duration-200 cursor-pointer sm:h-10"
+        py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer sm:h-10"
             onClick={() => {
               window.open('https://github.com/yondagonda');
             }}
           >
             <img src={github} className="h-5" alt="github icon" />
-            <div className="text-zinc-900 font-secondary">Github</div>
+            <div className="text-zinc-900 font-secondary 2xl:text-xl">
+              Github
+            </div>
           </div>
         </motion.div>
       </div>
@@ -97,52 +101,62 @@ export const Home = () => {
           duration: 0.12,
         }}
         className="bg-white/20 p-4 rounded-xl text-center backdrop-blur-[2px] flex flex-col gap-1 
-      items-center w-[300px] sm:w-[340px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] lg:py-10 mb-4"
+      items-center w-[300px] sm:w-[340px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] lg:py-10 mb-4 select-none"
       >
-        <div className="text-2xl font-bold pb-2 lg:text-3xl 2xl:text-4xl cursor-default 3xl:text-5xl">
+        <div className="text-2xl font-bold pb-2 lg:text-3xl 2xl:text-4xl cursor-default 3xl:text-5xl select-none">
           Quick Navigation
         </div>
 
         <Link to="/ecommerce-store/error">
           <div
-            className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl 
-            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] duration-200"
+            className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl 
+            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200"
           >
             <img src={erroricon} className="h-6" alt="right arrow" />
-            <div className="text-zinc-900 font-secondary">Error 404</div>
+            <div className="text-zinc-900 font-secondary 2xl:text-xl">
+              Error 404
+            </div>
           </div>
         </Link>
 
         <div
-          className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
-        py-1 w-[220px] duration-200 cursor-pointer"
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={commit} className="h-6" alt="github icon" />
-          <div className="text-zinc-900 font-secondary">Commit Log</div>
+          <div className="text-zinc-900 font-secondary 2xl:text-xl">
+            Commit Log
+          </div>
         </div>
 
         <div
-          className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
-        py-1 w-[220px] duration-200 cursor-pointer"
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={performance} className="h-6" alt="github icon" />
-          <div className="text-zinc-900 font-secondary">Performance</div>
+          <div className="text-zinc-900 font-secondary 2xl:text-xl">
+            Performance
+          </div>
         </div>
 
         <div
-          className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
-        py-1 w-[220px] duration-200 cursor-pointer"
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={tools} className="h-5" alt="github icon" />
-          <div className="text-zinc-900 font-secondary">Technologies</div>
+          <div className="text-zinc-900 font-secondary 2xl:text-xl">
+            Technologies
+          </div>
         </div>
 
         <div
-          className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
-        py-1 w-[220px] duration-200 cursor-pointer"
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={paper} className="h-5" alt="github icon" />
-          <div className="text-zinc-900 font-secondary">Read Me</div>
+          <div className="text-zinc-900 font-secondary 2xl:text-xl">
+            Read Me
+          </div>
         </div>
       </motion.div>
     </motion.div>

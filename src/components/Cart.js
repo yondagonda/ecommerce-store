@@ -46,12 +46,12 @@ export const Cart = ({
           >
             <div
               className="text-slate-50 flex flex-col justify-between h-full 
-          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10
+          p-6 w-[330px] xs:w-[360px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10
           3xl:w-[600px]"
             >
               <div>
                 <div className="flex justify-between mb-4">
-                  <div className="text-xl sm:text-3xl font-secondary">
+                  <div className="text-xl sm:text-3xl font-secondary select-none">
                     My Cart
                   </div>
                   <button
@@ -67,7 +67,7 @@ export const Cart = ({
                     {cart.map((cartItem, i) => {
                       return (
                         <motion.div
-                          whileTap={{ scale: 0.95 }}
+                          whileTap={{ scale: 0.99 }}
                           transition={{
                             duration: 0.1,
                           }}
@@ -117,9 +117,12 @@ export const Cart = ({
                 <div className="text-lg sm:text-xl 2xl:text-2xl">
                   {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
                 </div>
-                <div className="text-xl sm:text-2xl  cursor-pointer">
+                <motion.div
+                  whileTap={{ scale: 0.93 }}
+                  className="text-xl sm:text-2xl  cursor-pointer select-none outline-none"
+                >
                   Checkout ➜
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>

@@ -51,7 +51,7 @@ export const Browse = () => {
           <div className="text-xl xs:text-2xl 2xl:text-3xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
             Featured & Recommended
           </div>
-          <div className="px-4 flex gap-3 2xl:mb-2">
+          <div className="px-4 sm:flex gap-3 2xl:mb-2 hidden">
             <motion.div
               whileTap={{ scale: 0.95 }}
               transition={{

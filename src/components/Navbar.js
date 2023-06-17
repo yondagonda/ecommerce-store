@@ -17,7 +17,7 @@ export const Navbar = () => {
       <Link to="/ecommerce-store">
         <motion.div whileTap={{ scale: 0.9 }}>
           <svg
-            className="fill-white"
+            className="fill-white outline-none"
             width="24px"
             height="24px"
             viewBox="0 0 32 32"
