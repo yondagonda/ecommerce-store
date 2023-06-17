@@ -46,7 +46,8 @@ export const Cart = ({
           >
             <div
               className="text-slate-50 flex flex-col justify-between h-full 
-          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10"
+          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10
+          3xl:w-[600px]"
             >
               <div>
                 <div className="flex justify-between mb-4">
@@ -89,11 +90,16 @@ export const Cart = ({
                           animate="visible"
                           exit="removed"
                           key={cartItem.id}
-                          className="flex justify-between bg-zinc-700 p-4 rounded-xl cursor-default select-none"
+                          className="flex justify-between bg-zinc-700 p-4 rounded-xl cursor-default 
+                          select-none items-center"
                         >
-                          <div className="font-bold">{cartItem.title}</div>
+                          <div className="font-bold lg:text-lg 3xl:text-xl">
+                            {cartItem.title}
+                          </div>
                           <div className="flex items-center gap-2.5">
-                            <div>${cartItem.price}</div>
+                            <div className="sm:text-lg 2xl:text-xl">
+                              ${cartItem.price}
+                            </div>
                             <button
                               className="px-2 py-0.5 bg-zinc-800 rounded-full hover:text-red-500 duration-100"
                               onClick={(e) => onDelete(cartItem.id)}
@@ -108,10 +114,10 @@ export const Cart = ({
                 </div>
               </div>
               <div className="flex justify-around items-center  font-secondary">
-                <div className="text-lg sm:text-xl">
+                <div className="text-lg sm:text-xl 2xl:text-2xl">
                   {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
                 </div>
-                <div className="text-xl sm:text-2xl cursor-pointer">
+                <div className="text-xl sm:text-2xl 2xl:text-3xl cursor-pointer">
                   Checkout ➜
                 </div>
               </div>

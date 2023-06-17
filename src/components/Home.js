@@ -21,7 +21,7 @@ export const Home = () => {
   return (
     <motion.div
       className="text-slate-50 flex flex-col items-center gap-3 mt-10 sm:mt-16 sm:gap-6
-    lg:mt-[280px] 3xl:mt-[340px] lg:flex-row lg:justify-evenly"
+    lg:mt-[260px] lg:flex-row lg:justify-evenly"
       onLoad={() => setIsBackgroundVisible(true)}
       initial={{ opacity: 0, y: -20 }}
       animate={{
@@ -44,7 +44,7 @@ export const Home = () => {
           transition={{
             duration: 0.12,
           }}
-          className="text-center bg-white/20 p-4 rounded-xl backdrop-blur-[2px] w-[290px]
+          className="text-center bg-white/20 p-4 rounded-xl backdrop-blur-[2px] w-[94%]
       xs:w-[400px] sm:w-[550px] lg:w-[650px] 2xl:w-[800px] 3xl:w-[900px] 
       xs:p-6 sm:p-8 2xl:p-12 3xl:p-20 cursor-default"
         >
@@ -66,7 +66,7 @@ export const Home = () => {
             duration: 0.12,
           }}
           className="bg-white/20 p-4 rounded-xl text-center backdrop-blur-[2px] flex flex-col gap-1 
-      items-center w-[290px] sm:flex-row sm:w-[550px] justify-evenly"
+      items-center w-[94%] sm:flex-row sm:w-[550px] justify-evenly"
         >
           <Link to="/ecommerce-store/browse">
             <div
@@ -78,7 +78,8 @@ export const Home = () => {
             </div>
           </Link>
           <div
-            className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+            className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 
+            px-10 
         py-1 w-[220px] duration-200 cursor-pointer sm:h-10"
             onClick={() => {
               window.open('https://github.com/yondagonda');
@@ -96,7 +97,7 @@ export const Home = () => {
           duration: 0.12,
         }}
         className="bg-white/20 p-4 rounded-xl text-center backdrop-blur-[2px] flex flex-col gap-1 
-      items-center w-[290px] sm:w-[340px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] lg:py-10"
+      items-center w-[300px] sm:w-[340px] xl:w-[400px] 2xl:w-[440px] 3xl:w-[500px] lg:py-10 mb-4"
       >
         <div className="text-2xl font-bold pb-2 lg:text-3xl 2xl:text-4xl cursor-default 3xl:text-5xl">
           Quick Navigation

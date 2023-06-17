@@ -21,30 +21,32 @@ export const GameCard = ({ game }) => {
           <img
             src={require(`../img/${game.id}/img1.${game.images.first}`)}
             alt={game.title}
-            className="rounded-t-2xl h-[100%]"
+            className="rounded-t-2xl"
             draggable="false"
           />
           <div className="h-24 md:h-28 p-4">
-            <div className="flex justify-between">
-              <div className="text-sm md:text-base ">${game.price}</div>
+            <div className="flex justify-between items-center">
+              <div className="text-sm md:text-base lg:text-lg 2xl:text-xl">
+                ${game.price}
+              </div>
 
               {wishlist.includes(game.id) ? (
                 <img
                   onClick={(e) => onWishlistRemove(e, game.id)}
                   src={removeWL}
                   alt="heart"
-                  className="h-5 cursor-pointer"
+                  className="h-5 lg:h-6 cursor-pointer"
                 />
               ) : (
                 <img
                   onClick={(e) => onWishlistAdd(e, game.id)}
                   src={addWL}
                   alt="heart"
-                  className="h-5 cursor-pointer"
+                  className="h-5 lg:h-6 cursor-pointer"
                 />
               )}
             </div>
-            <div className="text-base md:text-lg lg:text-xl font-bold text-start">
+            <div className="text-base md:text-lg lg:text-xl font-bold text-start 2xl:text-2xl ">
               {game.title}
             </div>
           </div>

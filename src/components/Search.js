@@ -3,6 +3,7 @@ import { gameDataLibrary } from './gameDataLibrary';
 import { SearchContext } from '../App';
 import { GameList } from './GameList';
 import search from '../img/symbols/search.svg';
+import { motion } from 'framer-motion';
 
 export const Searchbar = () => {
   const {
@@ -25,7 +26,11 @@ export const Searchbar = () => {
 
   return (
     <div className={!isBackgroundVisible ? 'flex' : `flex z-[-10]`}>
-      <div className="hidden sm:block">
+      <motion.div
+        whileHover={{ scale: 1.01 }}
+        whileTap={{ scale: 0.97 }}
+        className="hidden sm:block"
+      >
         <input
           type="text"
           onChange={handleChange}
@@ -41,7 +46,7 @@ export const Searchbar = () => {
           className="h-6 inline-block cursor-pointer searchicon ml-2"
           alt="search button"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

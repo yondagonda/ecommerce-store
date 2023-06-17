@@ -39,24 +39,24 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
   return (
     <>
       <motion.div
-        initial={{ x: -300, opacity: 0 }}
+        initial={{ x: -350, opacity: 0 }}
         animate={{
           x: 0,
           opacity: 1,
           transition: {
             x: { type: 'spring', mass: 0.3, damping: 8 },
-            opacity: { duration: 0.5 },
+            opacity: { duration: 0.7 },
           },
         }}
         exit={{
-          x: '-20vw',
+          x: '-30vw',
           opacity: 0,
           transition: {
             x: {
-              duration: 0.1,
+              duration: 0.2,
             },
             opacity: {
-              duration: 0.1,
+              duration: 0.15,
             },
           },
         }}
@@ -75,36 +75,58 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                   className="p-3 sm:p-7 2xl:max-w-[2200px] 2xl:items-center 2xl:gap-4 flex flex-col"
                 >
                   <div
-                    className="mt-3 flex justify-center 2xl:justify-between items-center max-w-[1152px] 
-              gap-6 2xl:mt-10 3xl:mt-20"
+                    className="mt-3 justify-center flex 2xl:justify-between items-center max-w-[1152px] 
+              gap-10 2xl:mt-10 3xl:mt-20 sm:gap-24 lg:gap-32 2xl:gap-[160px] 3xl:gap-[200px]"
                   >
                     <Link to="/ecommerce-store/browse">
-                      <div className="px-3 hover:text-blue-300 rounded font-secondary flex items-center duration-200">
-                        <div className="text-2xl">↩</div>
-                        <div className="pl-2">Store</div>
-                      </div>
+                      <button
+                        className="px-3  rounded font-secondary flex items-center 
+                      duration-200 group"
+                      >
+                        <div className="h-5 w-5 lg:h-6 lg:w-6 group-hover:fill-blue-300 fill-white">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 52 52"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <path d="M48.6,23H15.4c-0.9,0-1.3-1.1-0.7-1.7l9.6-9.6c0.6-0.6,0.6-1.5,0-2.1l-2.2-2.2c-0.6-0.6-1.5-0.6-2.1,0 L2.5,25c-0.6,0.6-0.6,1.5,0,2.1L20,44.6c0.6,0.6,1.5,0.6,2.1,0l2.1-2.1c0.6-0.6,0.6-1.5,0-2.1l-9.6-9.6C14,30.1,14.4,29,15.3,29 h33.2c0.8,0,1.5-0.6,1.5-1.4v-3C50,23.8,49.4,23,48.6,23z"></path>{' '}
+                            </g>
+                          </svg>
+                        </div>
+                        <div className="pl-2 lg:text-xl 2xl:text-2xl group-hover:text-blue-300">
+                          Store
+                        </div>
+                      </button>
                     </Link>
                     <div
                       className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold
-               "
+                     2xl:text-5xl 3xl:text-6xl whitespace-nowrap"
                     >
                       {game.title}
                     </div>
                   </div>
                   <div
                     className="flex flex-col items-center 2xl:flex-row 2xl:gap-8 2xl:items-start
-               2xl:mt-4"
+               2xl:mt-2"
                   >
                     <div>
                       <ImageSlider id={id} images={game.images} />
                     </div>
 
-                    <div className="flex flex-col items-center 2xl:mt-16 3xl:mt-28">
+                    <div className="flex flex-col items-center 2xl:mt-16 3xl:mt-28 mb-4">
                       <div
                         className="rounded-2xl px-4 py-1.5 sm:p-2.5 mb-2 flex justify-center
                   items-center bg-zinc-800 gap-4 sm:gap-5 sm:w-[380px] 2xl:mb-4 "
                       >
-                        <div className="font-secondary">${game.price}</div>
+                        <div className="font-secondary 2xl:text-lg 3xl:text-xl">
+                          ${game.price}
+                        </div>
 
                         <RenderAddToCartButton currentGame={game} />
 
@@ -125,7 +147,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                         )}
                       </div>
 
-                      <div className="bg-zinc-800 rounded-2xl lg:max-w-[900px]">
+                      <div className="bg-zinc-800 rounded-2xl lg:max-w-[900px] mb-8">
                         <div
                           className="grid grid-cols-1 gap-6 md:gap-2 2xl:grid-cols-1 
                     md:grid-cols-[60%_40%] p-3 sm:p-5"
@@ -171,11 +193,12 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
 
                         <div className="text-base bg-zinc-700 rounded-b-2xl font-bold">
                           <div
-                            className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer hover:text-blue-300 duration-200"
+                            className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer 
+                            hover:text-blue-300 duration-200 flex gap-1 items-center group"
                             onClick={handleOpen}
                           >
                             {dropdownOpen ? 'Close' : 'See'} Specifications{' '}
-                            {dropdownOpen ? '🠗' : '➜'}
+                            {dropdownOpen ? '🡓' : '🡒'}
                           </div>
                           <AnimatePresence mode="wait">
                             {dropdownOpen && (
@@ -208,7 +231,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                                   },
                                 }}
                                 className="text-sm font-thin flex flex-col sm:px-3 lg:text-[15px]
-                        md:flex-row md:justify-center md:gap-2 lg:gap-7 px-2 sm:pb-2"
+                        md:flex-row md:justify-center md:gap-2 lg:gap-7 px-2"
                               >
                                 <div className="sm:mb-1 md:mb-2 lg:mb-4">
                                   <div className="font-bold text-red-400">
@@ -286,7 +309,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                                       {game.systemReqs[1].directX}
                                     </div>
                                   ) : null}
-                                  <div>
+                                  <div className="pb-1.5">
                                     <span className="text-gray-400">
                                       Storage:{' '}
                                     </span>

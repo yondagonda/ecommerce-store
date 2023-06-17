@@ -69,7 +69,7 @@ export const Browse = () => {
               transition={{
                 duration: 0.015,
               }}
-              className="text-sm bg-zinc-800 p-3 rounded-lg font-bold hover:brightness-125
+              className="text-sm bg-zinc-800 p-3 rounded-lg  hover:brightness-125
               duration-200 cursor-pointer 2xl:text-lg"
               onClick={() => {
                 setCurrentFilter();
