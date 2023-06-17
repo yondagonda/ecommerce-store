@@ -21,7 +21,7 @@ export const Home = () => {
   return (
     <motion.div
       className="text-slate-50 flex flex-col items-center gap-3 mt-10 sm:mt-16 sm:gap-6
-    lg:mt-[260px] lg:flex-row lg:justify-evenly"
+    lg:mt-[180px] 2xl:mt-[220px] 3xl:mt-[260px] lg:flex-row lg:justify-evenly"
       onLoad={() => setIsBackgroundVisible(true)}
       initial={{ opacity: 0, y: -20 }}
       animate={{

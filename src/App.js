@@ -102,7 +102,6 @@ function App() {
     });
     sum = Math.round(sum * 100) / 100;
     setTotal(sum);
-    console.log(sum);
   };
 
   const onWishlistAdd = (e, id) => {

@@ -22,6 +22,10 @@
   }
 }
 
+body {
+  background: rgb(24, 24, 27);
+}
+
 .box {
   margin: 0 0 !important;
   margin-inline: auto;

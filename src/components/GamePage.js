@@ -10,7 +10,9 @@ import { Notfound } from './Notfound';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const GamePage = () => {
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const { id } = useParams();
 
@@ -77,45 +79,49 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                   className="p-3 sm:p-7 2xl:max-w-[2200px] 2xl:items-center 2xl:gap-4 flex flex-col"
                 >
                   <div
-                    className="mt-3 justify-center flex 2xl:justify-between items-center max-w-[1152px] 
-              gap-2 xs:gap-10 sm:gap-24 2xl:mt-10 3xl:mt-20 lg:gap-32 2xl:gap-[160px] 3xl:gap-[200px]"
+                    className="mt-3 flex justify-center items-center max-w-[1152px] 
+               2xl:mt-10 3xl:mt-16 sm:gap-4 2xl:gap-10 3xl:gap-14"
                   >
                     <Link to="/ecommerce-store/browse">
                       <button
                         className="px-3  rounded font-secondary flex items-center 
                       duration-200 group"
                       >
-                        <div className="h-5 w-5 lg:h-6 lg:w-6 group-hover:fill-blue-300 fill-white">
+                        <div className="h-5 w-5 2xl:h-6 2xl:w-6 group-hover:fill-blue-300 fill-white">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 52 52"
                           >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g
                               id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             ></g>
                             <g id="SVGRepo_iconCarrier">
                               <path d="M48.6,23H15.4c-0.9,0-1.3-1.1-0.7-1.7l9.6-9.6c0.6-0.6,0.6-1.5,0-2.1l-2.2-2.2c-0.6-0.6-1.5-0.6-2.1,0 L2.5,25c-0.6,0.6-0.6,1.5,0,2.1L20,44.6c0.6,0.6,1.5,0.6,2.1,0l2.1-2.1c0.6-0.6,0.6-1.5,0-2.1l-9.6-9.6C14,30.1,14.4,29,15.3,29 h33.2c0.8,0,1.5-0.6,1.5-1.4v-3C50,23.8,49.4,23,48.6,23z"></path>{' '}
                             </g>
                           </svg>
                         </div>
-                        <div className="pl-2 text-sm xs:text-base lg:text-xl 2xl:text-2xl group-hover:text-blue-300">
+                        <div
+                          className="pl-2 text-sm xs:text-base lg:text-xl 2xl:text-2xl
+                         group-hover:text-blue-300
+                         "
+                        >
                           Store
                         </div>
                       </button>
                     </Link>
                     <div
-                      className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold
-                     2xl:text-5xl 3xl:text-6xl whitespace-nowrap"
+                      className="text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-bold
+                     2xl:text-5xl 3xl:text-6xl"
                     >
                       {game.title}
                     </div>
                   </div>
                   <div
                     className="flex flex-col items-center 2xl:flex-row 2xl:gap-8 2xl:items-start
-               2xl:mt-2"
+               2xl:mt-2 3xl:mt-10"
                   >
                     <div>
                       <ImageSlider id={id} images={game.images} />
