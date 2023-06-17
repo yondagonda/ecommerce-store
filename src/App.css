@@ -16,10 +16,6 @@
   animation-duration: 1s !important;
 }
 
-.homeduration {
-  transition: --tw-backdrop-blur 0.5s linear forwards;
-}
-
 @keyframes something {
   from {
     opacity: 0;
@@ -117,7 +113,8 @@
   width: 100vw;
 }
 
-.searchicon:hover {
+.searchicon:hover,
+.cunt:hover {
   filter: invert(50%) sepia(102%) saturate(300%) hue-rotate(161deg)
     brightness(904%) contrast(60%);
   transition: 0.2s;

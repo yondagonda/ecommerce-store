@@ -6,30 +6,16 @@ import { motion } from 'framer-motion';
 import { SearchContext } from '../App';
 
 export const Navbar = () => {
-  const {
-    setSearchInput,
-    setCurrentFilter,
-    setIsCartOpen,
-    isBrowseOpen,
-    setIsBrowseOpen,
-    cart,
-  } = useContext(SearchContext);
-
-  const lightNavBar = `flex justify-evenly p-3
-  text-slate-50 text-2xl font-bold items-center font-secondary`;
-
-  const darkNavBar = `flex justify-evenly p-3
-  text-slate-50 text-2xl font-bold bg-zinc-900 items-center font-secondary`;
+  const { setSearchInput, setCurrentFilter, setIsCartOpen, cart } =
+    useContext(SearchContext);
 
   return (
-    <motion.div className={isBrowseOpen ? darkNavBar : lightNavBar}>
+    <motion.div
+      className="flex justify-evenly p-3 2xl:text-3xl 2xl:p-6 3xl:pt-8
+    text-slate-50 text-2xl font-bold items-center bg-transparent font-secondary"
+    >
       <Link to="/ecommerce-store">
-        <img
-          src={home}
-          className="h-6"
-          alt="home button"
-          onClick={() => setIsBrowseOpen(false)}
-        />
+        <img src={home} className="h-5" alt="home button" />
       </Link>
 
       <Link
@@ -40,18 +26,18 @@ export const Navbar = () => {
           setCurrentFilter();
         }}
       >
-        Browse Store
+        <div className="text-base sm:text-xl"> Browse Store</div>
       </Link>
       {/* also on click of browse games, should reset any search filters  */}
 
-      <Searchbar isBrowseOpen={isBrowseOpen} />
+      <Searchbar />
       <div
-        className="cursor-pointer text-xl"
+        className="cursor-pointer text-base sm:text-xl"
         onClick={() => setIsCartOpen(true)}
       >
         Cart:{' '}
         {cart.length === 0 ? (
-          <span className="font-normal">Empty</span>
+          <span className="font-normal">0</span>
         ) : (
           cart.length
         )}

@@ -7,13 +7,7 @@ import { CartContext } from '../App';
 import { useContext } from 'react';
 
 export const Notfound = ({ darken }) => {
-  const { setIsBrowseOpen } = useContext(CartContext);
-
   const navigate = useNavigate();
-
-  if (darken) {
-    setIsBrowseOpen(true);
-  }
 
   const [progress, setProgress] = React.useState(0);
 

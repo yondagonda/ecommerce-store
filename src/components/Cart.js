@@ -9,10 +9,7 @@ export const Cart = ({
   total,
   isCartOpen,
 }) => {
-  console.log(cart);
-
   const onDelete = (id) => {
-    console.log(id);
     setCart(cart.filter((game) => game.id !== id));
     setSelectedGame();
   };
@@ -49,12 +46,19 @@ export const Cart = ({
           >
             <div
               className="text-slate-50 flex flex-col justify-between h-full 
-          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px]"
+          p-6 w-[320px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10"
             >
               <div>
                 <div className="flex justify-between mb-4">
-                  <div className="text-3xl font-secondary">My Cart</div>
-                  <button onClick={() => setIsCartOpen(false)}>Close</button>
+                  <div className="text-xl sm:text-3xl font-secondary">
+                    My Cart
+                  </div>
+                  <button
+                    onClick={() => setIsCartOpen(false)}
+                    className="hover:text-blue-200 duration-100"
+                  >
+                    Close
+                  </button>
                 </div>
 
                 <div className="flex flex-col gap-3">
@@ -62,6 +66,10 @@ export const Cart = ({
                     {cart.map((cartItem, i) => {
                       return (
                         <motion.div
+                          whileTap={{ scale: 0.95 }}
+                          transition={{
+                            duration: 0.1,
+                          }}
                           variants={{
                             hidden: {
                               opacity: 0,
@@ -81,16 +89,16 @@ export const Cart = ({
                           animate="visible"
                           exit="removed"
                           key={cartItem.id}
-                          className="flex justify-between bg-zinc-700 p-4 rounded-xl"
+                          className="flex justify-between bg-zinc-700 p-4 rounded-xl cursor-default select-none"
                         >
                           <div className="font-bold">{cartItem.title}</div>
                           <div className="flex items-center gap-2.5">
                             <div>${cartItem.price}</div>
                             <button
-                              className="px-2 bg-zinc-800 rounded-full"
+                              className="px-2 py-0.5 bg-zinc-800 rounded-full hover:text-red-500 duration-100"
                               onClick={(e) => onDelete(cartItem.id)}
                             >
-                              x
+                              ✕
                             </button>
                           </div>
                         </motion.div>
@@ -100,10 +108,12 @@ export const Cart = ({
                 </div>
               </div>
               <div className="flex justify-around items-center  font-secondary">
-                <div className="text-xl">
+                <div className="text-lg sm:text-xl">
                   {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
                 </div>
-                <div className="text-2xl cursor-pointer">Checkout ➜</div>
+                <div className="text-xl sm:text-2xl cursor-pointer">
+                  Checkout ➜
+                </div>
               </div>
             </div>
           </motion.div>
