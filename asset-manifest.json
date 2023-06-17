@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ecommerce-store/static/css/main.371ae3d1.css",
-    "main.js": "/ecommerce-store/static/js/main.8c208813.js",
-    "static/media/cyberpunk-bg.mp4": "/ecommerce-store/static/media/cyberpunk-bg.8ce20929eb955910aaf0.mp4",
+    "main.css": "/ecommerce-store/static/css/main.bbbf0d0a.css",
+    "main.js": "/ecommerce-store/static/js/main.148ade6f.js",
+    "static/media/cyberpunk-bg.mp4": "/ecommerce-store/static/media/cyberpunk-bg.1b4b689570d6963943ff.mp4",
     "static/media/img3.png": "/ecommerce-store/static/media/img3.35ae427c07477ec09722.png",
     "static/media/img4.png": "/ecommerce-store/static/media/img4.f5196d054cf985ed5840.png",
     "static/media/img2.png": "/ecommerce-store/static/media/img2.701ce83c3b20a115dd11.png",
@@ -24,19 +24,21 @@
     "static/media/OLDERROR.svg": "/ecommerce-store/static/media/OLDERROR.9214da51ae2b6b5930dd.svg",
     "static/media/commit.svg": "/ecommerce-store/static/media/commit.17f3ed2dcaee86a60797ecb2e735e6d8.svg",
     "static/media/performance.svg": "/ecommerce-store/static/media/performance.21a4b80bdf0d94ba5c13989a49404d9f.svg",
+    "static/media/punch.svg": "/ecommerce-store/static/media/punch.9e79b7734ad1474cf523e4f53646ff81.svg",
     "static/media/home.svg": "/ecommerce-store/static/media/home.7bdc5e0259a0109f9bc49e9e0056eb70.svg",
     "static/media/search.svg": "/ecommerce-store/static/media/search.a65675538948c164b523f35e4f3a3e9b.svg",
+    "static/media/back.svg": "/ecommerce-store/static/media/back.4ff9ba688e2285f5a362.svg",
     "static/media/rightarrow.svg": "/ecommerce-store/static/media/rightarrow.fd422de52f9c4c8f23043f9beae1a255.svg",
     "static/media/addWL.svg": "/ecommerce-store/static/media/addWL.e56f47da06b029106b989f5765d51762.svg",
     "static/media/removeWL.svg": "/ecommerce-store/static/media/removeWL.cdc2a0287ec92ae97e763d42c24869a8.svg",
     "static/media/paper.svg": "/ecommerce-store/static/media/paper.a8fa9aefbd757413cb0e50eba544181f.svg",
     "index.html": "/ecommerce-store/index.html",
     "static/media/erroricon.svg": "/ecommerce-store/static/media/erroricon.fe2fbc6af302824d5042b9afec03d722.svg",
-    "main.371ae3d1.css.map": "/ecommerce-store/static/css/main.371ae3d1.css.map",
-    "main.8c208813.js.map": "/ecommerce-store/static/js/main.8c208813.js.map"
+    "main.bbbf0d0a.css.map": "/ecommerce-store/static/css/main.bbbf0d0a.css.map",
+    "main.148ade6f.js.map": "/ecommerce-store/static/js/main.148ade6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.371ae3d1.css",
-    "static/js/main.8c208813.js"
+    "static/css/main.bbbf0d0a.css",
+    "static/js/main.148ade6f.js"
   ]
 }
