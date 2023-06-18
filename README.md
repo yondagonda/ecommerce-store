@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  Home page
+  Store Home page
 </p>
 
 ## Description
-A React-based e-commerce game store. Features include customized pages for individual games, a search bar, shopping cart functionality, and filters for different genres or for checking wishlist items.
+A React-based E-commerce game store. Features include customized pages for individual games, a search bar, shopping cart functionality, and filters for different genres or for checking wishlist items.
 You can read about [features](#features), [performance tests](#performance) and the [technologies](#technologies) used in the making of this site below.
 
 ## 🔴 Demo
@@ -43,13 +43,13 @@ Here is a GIF simulating a user starting at the home page, then browsing the lib
 - **Wishlist**: Users can save games to their wishlist, making it easier to keep track of games they want to purchase or explore further.
 
 ## Performance
-There were some issues with performance originally, unsurprsingly arising as a result of loading 30+ high quality images all at once in the 'browse' page.
-After some research, I went to work on compressing the image sizes by converting them to the more effiect .webp format, and also by creating a minified version of the image that would be rendered as the thumbnail.
+There were some issues with performance originally, unsurprsingly as a result of loading 30+ high quality images all at once in the 'browse' page.
+After some research, I learnt about lazy loading, and I went to work on compressing the image sizes by converting them to the more effiect .webp format, meanwhile also creating a minified version of the image that would be rendered as the thumbnail.
 
-Below are some performance metrics as analysed by [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+Below are some performance metrics as analysed by [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk), which hopefully are demonstrative of the image optimisations made.
 
 <p align="center">
-<img src="https://github.com/yondagonda/ecommerce-store/assets/109213163/1b408764-88a4-4806-9cae-d37b6ae477c4" alt="Shopping cart of the user">
+<img src="https://github.com/yondagonda/ecommerce-store/assets/109213163/87eba72b-61fd-4cd7-ab98-bb07eb58ff5d" alt="lighthouse scores">
 </p>
 
 ## Technologies 
@@ -61,10 +61,10 @@ Below are some performance metrics as analysed by [Google Lighthouse](https://ch
 
 ## What I learnt:
 - How to better organise my code when working in a larger project
-- Framer motion and its complexities with animating components upon mount and unmount
-- Furthered understanding of React Router through having to organise and connect my pages
+- Framer motion and animating components upon mount and unmount
+- Furthered understanding of React Router through having to learn to organise and connect my pages
 - React Context API and hooks such as useRef
-- How to more efficiently integrate a large number of images into a site without completely ruining performance
+- How to minimise the performance impacts that come from having a large number of images being rendered on your site
 
 ## Possible Features/Improvements to Implement:
 - Implementing Stripe Demo Payments into the checkout process
