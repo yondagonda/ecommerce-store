@@ -19,7 +19,7 @@ export const Browse = () => {
   return (
     <motion.div
       className="text-slate-50 bg-transparent min-h-screen h-full overflow-[none]
-    flex "
+    flex 3xl:justify-center"
       onLoad={() => setIsBackgroundVisible(false)}
       variants={{
         hidden: {
@@ -42,7 +42,7 @@ export const Browse = () => {
 
       <div className="">
         <div>
-          <div className="text-xl xs:text-2xl 2xl:text-3xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
+          <div className="text-xl xs:text-2xl 2xl:text-2xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
             Featured & Recommended
           </div>
           <div className="px-4 sm:flex gap-3 2xl:mb-2 hidden">
@@ -64,13 +64,15 @@ export const Browse = () => {
                 duration: 0.015,
               }}
               className="text-sm bg-zinc-800 p-3 rounded-lg  hover:brightness-125
-              duration-200 cursor-pointer 2xl:text-lg"
+              duration-200 cursor-pointer"
               onClick={() => {
                 setCurrentFilter();
                 setSearchInput('');
               }}
             >
-              <div className="select-none font-secondary">Clear Filter</div>
+              <div className="select-none font-secondary 2xl:text-lg">
+                Clear Filter
+              </div>
             </motion.div>
           </div>
         </div>

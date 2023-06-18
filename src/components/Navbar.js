@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <motion.nav
       className="flex justify-evenly p-3 2xl:text-3xl 2xl:p-6 
-    text-slate-50 text-2xl font-bold items-center bg-transparent font-secondary"
+    text-slate-50 text-2xl font-bold items-center bg-transparent font-secondary max-w-[2000px] margininlineauto"
     >
       <Link to="/ecommerce-store">
         <motion.div whileTap={{ scale: 0.9 }}>
