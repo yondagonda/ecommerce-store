@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecommerce-store/static/css/main.3659a77e.css",
-    "main.js": "/ecommerce-store/static/js/main.bff1ea32.js",
+    "main.js": "/ecommerce-store/static/js/main.1db82dca.js",
     "static/media/cyberpunk-bg.mp4": "/ecommerce-store/static/media/cyberpunk-bg.1b4b689570d6963943ff.mp4",
     "static/media/img3.png": "/ecommerce-store/static/media/img3.35ae427c07477ec09722.png",
     "static/media/img4.png": "/ecommerce-store/static/media/img4.f5196d054cf985ed5840.png",
@@ -32,10 +32,10 @@
     "static/media/paper.svg": "/ecommerce-store/static/media/paper.a8fa9aefbd757413cb0e50eba544181f.svg",
     "static/media/erroricon.svg": "/ecommerce-store/static/media/erroricon.fe2fbc6af302824d5042b9afec03d722.svg",
     "main.3659a77e.css.map": "/ecommerce-store/static/css/main.3659a77e.css.map",
-    "main.bff1ea32.js.map": "/ecommerce-store/static/js/main.bff1ea32.js.map"
+    "main.1db82dca.js.map": "/ecommerce-store/static/js/main.1db82dca.js.map"
   },
   "entrypoints": [
     "static/css/main.3659a77e.css",
-    "static/js/main.bff1ea32.js"
+    "static/js/main.1db82dca.js"
   ]
 }
