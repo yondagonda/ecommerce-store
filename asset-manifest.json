@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce-store/static/css/main.5016f595.css",
-    "main.js": "/ecommerce-store/static/js/main.e9839068.js",
+    "main.css": "/ecommerce-store/static/css/main.4b30f60f.css",
+    "main.js": "/ecommerce-store/static/js/main.faae3e7b.js",
     "static/media/cyberpunk-bg.mp4": "/ecommerce-store/static/media/cyberpunk-bg.1b4b689570d6963943ff.mp4",
     "static/media/img3.png": "/ecommerce-store/static/media/img3.35ae427c07477ec09722.png",
     "static/media/img4.png": "/ecommerce-store/static/media/img4.f5196d054cf985ed5840.png",
@@ -31,11 +31,11 @@
     "static/media/removeWL.svg": "/ecommerce-store/static/media/removeWL.cdc2a0287ec92ae97e763d42c24869a8.svg",
     "static/media/paper.svg": "/ecommerce-store/static/media/paper.a8fa9aefbd757413cb0e50eba544181f.svg",
     "static/media/erroricon.svg": "/ecommerce-store/static/media/erroricon.fe2fbc6af302824d5042b9afec03d722.svg",
-    "main.5016f595.css.map": "/ecommerce-store/static/css/main.5016f595.css.map",
-    "main.e9839068.js.map": "/ecommerce-store/static/js/main.e9839068.js.map"
+    "main.4b30f60f.css.map": "/ecommerce-store/static/css/main.4b30f60f.css.map",
+    "main.faae3e7b.js.map": "/ecommerce-store/static/js/main.faae3e7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.5016f595.css",
-    "static/js/main.e9839068.js"
+    "static/css/main.4b30f60f.css",
+    "static/js/main.faae3e7b.js"
   ]
 }
