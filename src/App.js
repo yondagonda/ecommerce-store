@@ -21,9 +21,6 @@ import { AnimatePresence } from 'framer-motion';
 export const CartContext = React.createContext();
 export const SearchContext = React.createContext();
 
-// TODO:
-// Then, only after doing all the previous, sort out media queries for everything
-
 function App() {
   const location = useLocation();
   const [selectedGame, setSelectedGame] = useState();
@@ -65,22 +62,10 @@ function App() {
   };
 
   useEffect(() => {
-    if (searchResults.length > 0) {
-      console.log(searchResults);
-    }
-  }, [searchResults]);
-
-  useEffect(() => {
     if (addToWish) {
       setWishlist(wishlist.concat(addToWish));
     }
   }, [addToWish]);
-
-  useEffect(() => {
-    if (currentFilter) {
-      console.log(`changing filter to: ${currentFilter}`);
-    }
-  }, [currentFilter]);
 
   useEffect(() => {
     if (selectedGame) {

@@ -65,16 +65,6 @@ export const GameList = () => {
             );
           }
         }
-        // if (currentFilter === 'Error Page') {
-        //   if (searchResults.includes(game.id)) {
-        //     return (
-        //       <div className="border border-[transparent]" key={game.id}>
-        //         <GameCardRender />
-        //         {/* Maybe render an error page here instead? or a 'no results found' page etc.  */}
-        //       </div>
-        //     );
-        //   }
-        // }
       })}
     </div>
   );

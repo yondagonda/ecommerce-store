@@ -16,12 +16,6 @@ export const Browse = () => {
     hasRenderedGameListRef,
   } = useContext(CartContext);
 
-  let ytransition = { type: 'spring', mass: 0.4, damping: 8 };
-
-  if (hasRenderedGameListRef.current) {
-    ytransition = { type: 'spring', mass: 0.4, damping: 8 };
-  }
-
   return (
     <motion.div
       className="text-slate-50 bg-transparent min-h-screen h-full overflow-[none]

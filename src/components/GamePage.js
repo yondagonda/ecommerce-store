@@ -209,7 +209,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                         <div className="text-base bg-zinc-700 rounded-b-2xl font-bold">
                           <div
                             className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer 
-                            hover:text-blue-300 duration-200 flex gap-1 items-center group"
+                            hover:text-blue-300 duration-200 flex gap-1 items-center group select-none"
                             onClick={handleOpen}
                           >
                             {dropdownOpen ? 'Close' : 'See'} Specifications{' '}

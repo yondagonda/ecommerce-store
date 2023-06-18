@@ -3,8 +3,6 @@ import error from '../img/symbols/error404.svg';
 import { useNavigate } from 'react-router-dom';
 import { LinearProgress } from '@mui/material';
 import Box from '@mui/material/Box';
-import { CartContext } from '../App';
-import { useContext } from 'react';
 
 export const Notfound = ({ darken }) => {
   const navigate = useNavigate();

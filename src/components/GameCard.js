@@ -19,7 +19,7 @@ export const GameCard = ({ game }) => {
       <Link to={`/ecommerce-store/games/${game.id}`} draggable="false">
         <div className="bg-zinc-800 hover:bg-zinc-700/60 rounded-2xl">
           <img
-            src={require(`../img/${game.id}/img1.${game.images.first}`)}
+            src={require(`../img/${game.id}/thumb.webp`)}
             alt={game.title}
             className="rounded-t-2xl"
             draggable="false"

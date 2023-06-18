@@ -10,7 +10,7 @@ export const Navbar = () => {
     useContext(SearchContext);
 
   return (
-    <motion.div
+    <motion.nav
       className="flex justify-evenly p-3 2xl:text-3xl 2xl:p-6 
     text-slate-50 text-2xl font-bold items-center bg-transparent font-secondary"
     >
@@ -48,7 +48,6 @@ export const Navbar = () => {
           Browse Store
         </motion.div>
       </Link>
-      {/* also on click of browse games, should reset any search filters  */}
 
       <Searchbar />
       <motion.div
@@ -63,6 +62,6 @@ export const Navbar = () => {
           cart.length
         )}
       </motion.div>
-    </motion.div>
+    </motion.nav>
   );
 };
