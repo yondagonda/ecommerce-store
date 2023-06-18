@@ -32,6 +32,15 @@ body {
   max-height: 1000px !important;
 }
 
+@media only screen and (min-width: 2200px) {
+  .justifycenterme {
+    justify-content: center;
+  }
+  .setaminwidth {
+    min-width: 2000px;
+  }
+}
+
 @media only screen and (max-width: 2160px) {
   .prev,
   .next,

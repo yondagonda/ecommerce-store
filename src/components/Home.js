@@ -69,18 +69,20 @@ export const Home = () => {
       items-center w-[94%] sm:flex-row sm:w-[550px] justify-evenly select-none"
         >
           <Link to="/ecommerce-store/browse">
-            <div
+            <motion.div
+              whileHover={{ scale: 1.02 }}
               className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl 
-            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200 sm:h-10"
+            hover:bg-blue-400 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200 sm:h-10"
             >
               <img src={rightarrow} className="h-7" alt="right arrow" />
               <div className="text-zinc-900 font-secondary 2xl:text-xl">
                 Browse
               </div>
-            </div>
+            </motion.div>
           </Link>
-          <div
-            className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="h-8 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-400 
             px-10 
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer sm:h-10"
             onClick={() => {
@@ -91,7 +93,7 @@ export const Home = () => {
             <div className="text-zinc-900 font-secondary 2xl:text-xl">
               Github
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -108,56 +110,79 @@ export const Home = () => {
         </div>
 
         <Link to="/ecommerce-store/error">
-          <div
+          <motion.div
+            whileHover={{ scale: 1.02 }}
             className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl 
-            hover:bg-blue-300 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200"
+            hover:bg-blue-400 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200"
           >
             <img src={erroricon} className="h-6" alt="right arrow" />
             <div className="text-zinc-900 font-secondary 2xl:text-xl">
               Error 404
             </div>
-          </div>
+          </motion.div>
         </Link>
 
-        <div
-          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          onClick={() => {
+            window.open(
+              'https://github.com/yondagonda/ecommerce-store/commits/main'
+            );
+          }}
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-400 px-10 
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={commit} className="h-6" alt="github icon" />
           <div className="text-zinc-900 font-secondary 2xl:text-xl">
             Commit Log
           </div>
-        </div>
+        </motion.div>
 
-        <div
-          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          onClick={() => {
+            window.open(
+              'https://github.com/yondagonda/ecommerce-store#performance'
+            );
+          }}
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-400 px-10 
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={performance} className="h-6" alt="github icon" />
           <div className="text-zinc-900 font-secondary 2xl:text-xl">
             Performance
           </div>
-        </div>
+        </motion.div>
 
-        <div
-          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          onClick={() => {
+            window.open(
+              'https://github.com/yondagonda/ecommerce-store#technologies'
+            );
+          }}
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-400 px-10 
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={tools} className="h-5" alt="github icon" />
           <div className="text-zinc-900 font-secondary 2xl:text-xl">
             Technologies
           </div>
-        </div>
+        </motion.div>
 
-        <div
-          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-300 px-10 
+        <motion.div
+          onClick={() => {
+            window.open('https://github.com/yondagonda/ecommerce-store#readme');
+          }}
+          whileHover={{ scale: 1.02 }}
+          className="h-8 2xl:h-9 flex justify-center items-center gap-2 bg-white rounded-2xl hover:bg-blue-400 px-10 
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={paper} className="h-5" alt="github icon" />
           <div className="text-zinc-900 font-secondary 2xl:text-xl">
             Read Me
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

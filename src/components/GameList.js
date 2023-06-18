@@ -17,7 +17,7 @@ export const GameList = () => {
     <div
       className="bg-transparent grid grid-cols-1
         xs:grid-cols-2 gap-3 sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3 glist items-end
-        xl:grid-cols-3 3xl:grid-cols-4 pb-6 lg:pr-12 2xl:pr-20 max-w-[2000px]"
+        xl:grid-cols-3 3xl:grid-cols-4 pb-6 lg:pr-12 2xl:pr-20 "
     >
       {gameDataLibrary.map((game, i) => {
         if (

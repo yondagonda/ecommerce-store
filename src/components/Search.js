@@ -28,7 +28,7 @@ export const Searchbar = () => {
     <div className={!isBackgroundVisible ? 'flex' : `flex z-[-10]`}>
       <motion.div
         whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.99 }}
         className="hidden sm:block"
       >
         <input

@@ -19,7 +19,7 @@ export const Browse = () => {
   return (
     <motion.div
       className="text-slate-50 bg-transparent min-h-screen h-full overflow-[none]
-    flex 3xl:justify-center"
+    flex justifycenterme"
       onLoad={() => setIsBackgroundVisible(false)}
       variants={{
         hidden: {
@@ -40,7 +40,7 @@ export const Browse = () => {
     >
       <Filters />
 
-      <div className="">
+      <div className="max-w-[2000px] setaminwidth ">
         <div>
           <div className="text-xl xs:text-2xl 2xl:text-2xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
             Featured & Recommended

@@ -362,7 +362,7 @@ const RenderAddToCartButton = ({ currentGame }) => {
         duration: 0.1,
       }}
       className="px-2 py-1 rounded text-sm sm:text-base font-secondary 
-      hover:bg-zinc-700 duration-200 outline outline-1"
+      hover:text-blue-400 duration-200"
       onClick={() => {
         setSelectedGame(currentGame);
       }}
@@ -378,7 +378,7 @@ const RenderAddToCartButton = ({ currentGame }) => {
         duration: 0.1,
       }}
       className="px-2 py-1 rounded text-sm sm:text-base font-secondary 
-      text-blue-300 ring-1 hover:text-blue-400 duration-200"
+      text-blue-400 ring-1 duration-200"
       onClick={() => setIsCartOpen(true)}
     >
       View in Cart
