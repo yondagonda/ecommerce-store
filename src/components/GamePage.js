@@ -48,8 +48,8 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
           x: 0,
           opacity: 1,
           transition: {
-            x: { type: 'spring', mass: 0.3, damping: 8 },
-            opacity: { duration: 0.7 },
+            x: { type: 'spring', mass: 0.5, damping: 9.5 },
+            opacity: { duration: 0.8 },
           },
         }}
         exit={{
@@ -57,7 +57,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
           opacity: 0,
           transition: {
             x: {
-              duration: 0.2,
+              duration: 0.25,
             },
             opacity: {
               duration: 0.15,

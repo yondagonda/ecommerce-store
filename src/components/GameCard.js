@@ -19,10 +19,13 @@ export const GameCard = ({ game }) => {
       <Link to={`/ecommerce-store/games/${game.id}`} draggable="false">
         <div className="bg-zinc-800 hover:bg-zinc-700/60 rounded-2xl">
           <img
+            loading="lazy"
             src={require(`../img/${game.id}/thumb.webp`)}
             alt={game.title}
             className="rounded-t-2xl"
             draggable="false"
+            width="580px"
+            height="330px"
           />
           <div className="h-24 md:h-28 p-4">
             <div className="flex justify-between items-center">
