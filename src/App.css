@@ -71,21 +71,21 @@ body {
 
 @media only screen and (max-width: 1535px) {
   .carousel-container {
-    max-height: 470px !important;
-    min-width: 820px !important;
+    max-height: 430px !important;
+    min-width: 790px !important;
   }
   .thumbnail {
-    max-width: 100px;
+    max-width: 90px;
   }
 }
 
 @media only screen and (max-width: 1279px) {
   .carousel-container {
-    max-height: 450px !important;
-    min-width: 800px !important;
+    max-height: 420px !important;
+    min-width: 760px !important;
   }
   .thumbnail {
-    max-width: 100px;
+    max-width: 90px;
   }
 }
 
