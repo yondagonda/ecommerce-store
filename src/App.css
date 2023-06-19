@@ -51,7 +51,7 @@ body {
     font-size: 20px !important;
   }
   .carousel-container {
-    max-height: 560px !important;
+    max-height: 540px !important;
     min-width: 920px !important;
   }
   .thumbnail {
@@ -61,7 +61,7 @@ body {
 
 @media only screen and (max-width: 1800px) {
   .carousel-container {
-    max-height: 500px !important;
+    max-height: 490px !important;
     min-width: 840px !important;
   }
   .thumbnail {
@@ -71,8 +71,8 @@ body {
 
 @media only screen and (max-width: 1535px) {
   .carousel-container {
-    max-height: 500px !important;
-    min-width: 840px !important;
+    max-height: 470px !important;
+    min-width: 820px !important;
   }
   .thumbnail {
     max-width: 100px;

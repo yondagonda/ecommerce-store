@@ -25,7 +25,7 @@ export const GameList = () => {
           currentFilter === undefined
         ) {
           return (
-            <motion.div
+            <motion.button
               variants={{
                 hidden: {
                   opacity: 0,
@@ -44,7 +44,7 @@ export const GameList = () => {
               key={game.id}
             >
               <GameCard game={game} />
-            </motion.div>
+            </motion.button>
           );
         }
         if (currentFilter === 'Wishlist') {

@@ -208,7 +208,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                           </div>
                         </div>
 
-                        <div className="text-base bg-zinc-700 rounded-b-2xl font-bold">
+                        <button className="w-[100%] text-start text-base bg-zinc-700 rounded-b-2xl font-bold">
                           <div
                             className="px-2 py-1 sm:px-4 sm:py-2 cursor-pointer 
                             hover:text-blue-300 duration-200 flex gap-1 items-center group select-none"
@@ -336,7 +336,7 @@ const RenderGamePageInfo = ({ id, onAddToCart }) => {
                               </motion.div>
                             )}
                           </AnimatePresence>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
