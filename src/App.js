@@ -115,10 +115,12 @@ function App() {
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(true);
 
   return (
-    <div className="App">
+    <div className="App overflow-x-hidden">
       <div
         className={
-          !isBackgroundVisible ? 'bg-zinc-900 min-h-screen h-full z-[-1]' : null
+          !isBackgroundVisible
+            ? 'bg-zinc-900 min-h-screen h-full z-[-1] overflow-x-hidden'
+            : null
         }
       >
         {isBackgroundVisible ? <BackgroundVideo /> : null}

@@ -75,9 +75,7 @@ export const Home = () => {
             hover:bg-blue-400 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200 sm:h-10"
             >
               <img src={rightarrow} className="h-7" alt="right arrow" />
-              <div className="text-zinc-900 font-secondary 2xl:text-xl">
-                Browse
-              </div>
+              <div className="text-zinc-900 2xl:text-xl font-bold">Browse</div>
             </motion.div>
           </Link>
           <motion.div
@@ -90,9 +88,7 @@ export const Home = () => {
             }}
           >
             <img src={github} className="h-5" alt="github icon" />
-            <div className="text-zinc-900 font-secondary 2xl:text-xl">
-              Github
-            </div>
+            <div className="text-zinc-900 2xl:text-xl font-bold">Github</div>
           </motion.div>
         </motion.div>
       </div>
@@ -117,9 +113,7 @@ export const Home = () => {
             hover:bg-blue-400 px-10 py-1 cursor-pointer w-[220px] 2xl:w-[250px] duration-200"
           >
             <img src={erroricon} className="h-6" alt="right arrow" />
-            <div className="text-zinc-900 font-secondary 2xl:text-xl">
-              Error 404
-            </div>
+            <div className="text-zinc-900 2xl:text-xl font-bold">Error 404</div>
           </motion.div>
         </Link>
 
@@ -134,9 +128,7 @@ export const Home = () => {
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={commit} className="h-6" alt="github icon" />
-          <div className="text-zinc-900 font-secondary 2xl:text-xl">
-            Commit Log
-          </div>
+          <div className="text-zinc-900 2xl:text-xl font-bold">Commit Log</div>
         </motion.div>
 
         <motion.div
@@ -150,9 +142,7 @@ export const Home = () => {
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={performance} className="h-6" alt="github icon" />
-          <div className="text-zinc-900 font-secondary 2xl:text-xl">
-            Performance
-          </div>
+          <div className="text-zinc-900 2xl:text-xl font-bold">Performance</div>
         </motion.div>
 
         <motion.div
@@ -166,7 +156,7 @@ export const Home = () => {
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={tools} className="h-5" alt="github icon" />
-          <div className="text-zinc-900 font-secondary 2xl:text-xl">
+          <div className="text-zinc-900 2xl:text-xl font-bold">
             Technologies
           </div>
         </motion.div>
@@ -180,9 +170,7 @@ export const Home = () => {
         py-1 w-[220px] 2xl:w-[250px] duration-200 cursor-pointer"
         >
           <img src={paper} className="h-5" alt="github icon" />
-          <div className="text-zinc-900 font-secondary 2xl:text-xl">
-            Read Me
-          </div>
+          <div className="text-zinc-900 2xl:text-xl font-bold">Read Me</div>
         </motion.div>
       </motion.div>
     </motion.div>
