@@ -33,7 +33,7 @@ export const GameList = () => {
                 visible: (i) => ({
                   opacity: 1,
                   y: 0,
-                  transition: { delay: i * 0.08 },
+                  transition: { delay: i * 0.14 },
                 }),
               }}
               custom={i}

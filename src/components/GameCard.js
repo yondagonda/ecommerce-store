@@ -14,7 +14,7 @@ export const GameCard = ({ game }) => {
         whileHover={{ scale: 1.015 }}
         whileTap={{ scale: 0.99 }}
         transition={{
-          duration: 0.15,
+          duration: 0.12,
         }}
         className="bg-zinc-800 hover:bg-zinc-700/60 rounded-2xl"
       >

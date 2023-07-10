@@ -28,8 +28,13 @@ export const Browse = () => {
           opacity: 1,
           y: 0,
           transition: {
-            y: { type: 'spring', mass: 0.3, damping: 8, stiffness: 30 },
-            opacity: { duration: 0.8 },
+            y: {
+              type: 'spring',
+              mass: 0.3,
+              damping: 8,
+              stiffness: 30,
+            },
+            opacity: { duration: 0.8, delay: 0.23 },
           },
         },
       }}

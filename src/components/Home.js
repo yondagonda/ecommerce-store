@@ -36,14 +36,14 @@ export const Home = () => {
         y: 0,
         transition: {
           y: {
-            duration: 1,
+            duration: 0.7,
           },
         },
       }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{
-        duration: 1,
+        duration: 0.7,
       }}
     >
       <section className="flex flex-col gap-3 items-center sm:gap-5">
