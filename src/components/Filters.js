@@ -1,4 +1,3 @@
-import { FilterContext } from './Browse';
 import React, { useContext } from 'react';
 import { CartContext } from '../App';
 import { motion } from 'framer-motion';
@@ -6,27 +5,31 @@ import { motion } from 'framer-motion';
 export const Filters = () => {
   const { setCurrentFilter } = useContext(CartContext);
 
+  const svgContainerCSS = `p-1.5 bg-zinc-700 rounded-md fill-white
+  group-hover:fill-black group-hover:bg-white duration-200`;
+
+  const buttonCSS = 'group flex items-center gap-2 w-full';
+
+  const buttonHeaderCSS = '2xl:text-lg';
+
   return (
-    <div
+    <section
       className="hidden sm:block pt-10 pr-2 pl-1
       md:px-5 md:pt-14 font-secondary lg:px-8 lg:pt-20 2xl:px-10"
     >
       <div className="flex flex-col gap-2 mb-4 md:gap-4 min-w-[23%] md:max-w-[180px]">
-        <div className="text-2xl font-bold">Filters</div>
+        <h2 className="text-2xl font-bold">Filters</h2>
         <div className="flex flex-col gap-2 md:gap-4 items-start">
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Wishlist"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -38,27 +41,24 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Wishlist</div>
+            <h3 className={buttonHeaderCSS}>Wishlist</h3>
           </motion.button>
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5 md:gap-3">
-        <div className="text-lg font-bold">Genres</div>
+        <h3 className="text-lg font-bold">Genres</h3>
         <div className="flex flex-col gap-2 md:gap-4 items-start">
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Action"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28px"
@@ -74,22 +74,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Action</div>
+            <h3 className={buttonHeaderCSS}>Action</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="RPG"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -102,22 +99,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">RPG</div>
+            <h3 className={buttonHeaderCSS}>RPG</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Singleplayer"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -129,22 +123,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Singleplayer</div>
+            <h3 className={buttonHeaderCSS}>Singleplayer</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Shooter"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -156,22 +147,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Shooter</div>
+            <h3 className={buttonHeaderCSS}>Shooter</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Adventure"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -183,22 +171,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Adventure</div>
+            <h3 className={buttonHeaderCSS}>Adventure</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Strategy"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -210,22 +195,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Strategy</div>
+            <h3 className={buttonHeaderCSS}>Strategy</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Racing"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -237,22 +219,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Racing</div>
+            <h3 className={buttonHeaderCSS}>Racing</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Sports"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -264,22 +243,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Sports</div>
+            <h3 className={buttonHeaderCSS}>Sports</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Simulation"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -291,22 +267,19 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Simulation</div>
+            <h3 className={buttonHeaderCSS}>Simulation</h3>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 w-full"
+            className={buttonCSS}
             onClick={(e) => {
               setCurrentFilter(e.currentTarget.dataset.id);
             }}
             data-id="Puzzle"
           >
-            <div
-              className="p-1.5 bg-zinc-700 rounded-md fill-white
-            group-hover:fill-black group-hover:bg-white duration-200"
-            >
+            <div className={svgContainerCSS}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -318,10 +291,10 @@ export const Filters = () => {
                 </g>
               </svg>
             </div>
-            <div className="2xl:text-lg">Puzzle</div>
+            <h3 className={buttonHeaderCSS}>Puzzle</h3>
           </motion.button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

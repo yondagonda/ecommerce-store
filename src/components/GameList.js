@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import { gameDataLibrary } from './gameDataLibrary';
-import React, { useContext, useEffect, useState, useRef } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../App';
 import { GameCard } from './GameCard';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const GameList = () => {
   const { currentFilter, wishlist, searchResults, hasRenderedGameListRef } =
@@ -14,9 +13,9 @@ export const GameList = () => {
   }, []);
 
   return (
-    <div
-      className="bg-transparent grid grid-cols-1
-        xs:grid-cols-2 gap-3 sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3 glist items-end
+    <section
+      className="bg-transparent grid grid-cols-1 xs:grid-cols-2 gap-3 
+      sm:grid-cols-2 md:p-4 lg:grid-cols-2 text-slate-50 p-3 glist items-end
         xl:grid-cols-3 3xl:grid-cols-4 pb-6 lg:pr-12 2xl:pr-20 "
     >
       {gameDataLibrary.map((game, i) => {
@@ -50,22 +49,28 @@ export const GameList = () => {
         if (currentFilter === 'Wishlist') {
           if (wishlist.includes(game.id)) {
             return (
-              <motion.div className="border border-[transparent]" key={game.id}>
+              <motion.button
+                className="border border-[transparent]"
+                key={game.id}
+              >
                 <GameCard game={game} />
-              </motion.div>
+              </motion.button>
             );
           }
         }
         if (currentFilter === 'Search') {
           if (searchResults.includes(game.id)) {
             return (
-              <motion.div className="border border-[transparent]" key={game.id}>
+              <motion.button
+                className="border border-[transparent]"
+                key={game.id}
+              >
                 <GameCard game={game} />
-              </motion.div>
+              </motion.button>
             );
           }
         }
       })}
-    </div>
+    </section>
   );
 };

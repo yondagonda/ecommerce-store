@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Searchbar } from './Search';
 
@@ -98,13 +98,12 @@ export const Navbar = () => {
 
       <Searchbar />
 
-      <motion.div
+      <motion.a
+        href="https://github.com/yondagonda"
+        target="_blank"
         whileTap={{ scale: 0.95 }}
         className=" gap-2 cursor-pointer items-center hidden xl:flex select-none 
         group"
-        onClick={() => {
-          window.open('https://github.com/yondagonda');
-        }}
       >
         <svg
           viewBox="0 0 48 48"
@@ -129,12 +128,12 @@ export const Navbar = () => {
             ></path>
           </g>
         </svg>
-        <div className="xl:text-lg group-hover:text-purple-400 duration-200">
+        <h2 className="xl:text-lg group-hover:text-purple-400 duration-200">
           yondagonda
-        </div>
-      </motion.div>
+        </h2>
+      </motion.a>
 
-      <motion.div
+      <motion.button
         whileTap={{ scale: 0.95 }}
         className="cursor-pointer text-base sm:text-xl flex gap-2 items-center"
         onClick={() => setIsCartOpen(true)}
@@ -164,15 +163,15 @@ export const Navbar = () => {
             ></path>{' '}
           </g>
         </svg>
-        <div>
+        <h2>
           Cart:{' '}
           {cart.length === 0 ? (
             <span className="font-normal">0</span>
           ) : (
             cart.length
           )}
-        </div>
-      </motion.div>
+        </h2>
+      </motion.button>
     </motion.nav>
   );
 };

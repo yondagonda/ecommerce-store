@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
-import { gameDataLibrary } from './gameDataLibrary';
 import { Filters } from './Filters';
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import { GameList } from './GameList';
 import { CartContext } from '../App';
 import { useContext } from 'react';
@@ -17,7 +15,7 @@ export const Browse = () => {
   } = useContext(CartContext);
 
   return (
-    <motion.div
+    <motion.main
       className="text-slate-50 bg-transparent min-h-screen h-full overflow-[none]
     flex justifycenterme"
       onLoad={() => setIsBackgroundVisible(false)}
@@ -40,13 +38,13 @@ export const Browse = () => {
     >
       <Filters />
 
-      <div className="max-w-[2000px] setaminwidth ">
-        <div>
-          <div className="text-xl xs:text-2xl 2xl:text-2xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
+      <section className="max-w-[2000px] setaminwidth ">
+        <section>
+          <h2 className="text-xl xs:text-2xl 2xl:text-2xl px-4 pt-4 sm:pt-7 mb-2 font-bold ">
             Featured & Recommended
-          </div>
+          </h2>
           <div className="px-4 sm:flex gap-3 2xl:mb-2 hidden">
-            <motion.div
+            <motion.h4
               whileTap={{ scale: 0.95 }}
               transition={{
                 duration: 0.1,
@@ -57,8 +55,9 @@ export const Browse = () => {
               {currentFilter === 'Error Page'
                 ? 'Filter by:'
                 : `Filter by: ${currentFilter ? currentFilter : 'None'}`}
-            </motion.div>
-            <motion.div
+            </motion.h4>
+
+            <motion.button
               whileTap={{ scale: 0.9 }}
               transition={{
                 duration: 0.015,
@@ -70,14 +69,15 @@ export const Browse = () => {
                 setSearchInput('');
               }}
             >
-              <div className="select-none font-secondary 2xl:text-lg">
+              <h4 className="select-none font-secondary 2xl:text-lg">
                 Clear Filter
-              </div>
-            </motion.div>
+              </h4>
+            </motion.button>
           </div>
-        </div>
+        </section>
+
         <GameList />
-      </div>
-    </motion.div>
+      </section>
+    </motion.main>
   );
 };

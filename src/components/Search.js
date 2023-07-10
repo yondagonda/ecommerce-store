@@ -1,18 +1,11 @@
-import React, { useContext, useEffect } from 'react';
-import { gameDataLibrary } from './gameDataLibrary';
+import React, { useContext } from 'react';
 import { SearchContext } from '../App';
-import { GameList } from './GameList';
 import search from '../img/symbols/search.svg';
 import { motion } from 'framer-motion';
 
 export const Searchbar = () => {
-  const {
-    searchInput,
-    setSearchInput,
-    setCurrentFilter,
-    onExecuteSearch,
-    isBackgroundVisible,
-  } = useContext(SearchContext);
+  const { searchInput, setSearchInput, onExecuteSearch, isBackgroundVisible } =
+    useContext(SearchContext);
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -31,7 +24,9 @@ export const Searchbar = () => {
         whileTap={{ scale: 0.99 }}
         className="hidden sm:block"
       >
+        <label htmlFor="searchBar"></label>
         <input
+          id="searchBar"
           type="text"
           onChange={handleChange}
           value={searchInput}

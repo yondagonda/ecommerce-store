@@ -22,7 +22,7 @@ export const ImageSlider = ({ id, images }) => {
 
   return (
     <>
-      <div className="yo flex justify-center pt-6 pb-6 z-[-10]">
+      <figure className="yo flex justify-center pt-6 pb-6 z-[-10]">
         <Carousel
           data={data}
           time={4000}
@@ -40,7 +40,7 @@ export const ImageSlider = ({ id, images }) => {
             maxHeight: '648px',
           }}
         />
-      </div>
+      </figure>
     </>
   );
 };

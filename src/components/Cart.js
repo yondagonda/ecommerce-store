@@ -23,7 +23,7 @@ export const Cart = ({
               opacity-70 z-10`}
           ></div>
 
-          <motion.div
+          <motion.aside
             key="cart"
             className="fixed right-0 h-full bg-zinc-800 z-10"
             initial={{ width: '0px' }}
@@ -49,11 +49,11 @@ export const Cart = ({
           p-6 w-[330px] xs:w-[360px] sm:w-[400px] lg:w-[420px] xl:w-[470px] 2xl:w-[520px] 2xl:p-10
           3xl:w-[600px]"
             >
-              <div>
+              <section>
                 <div className="flex justify-between mb-4">
-                  <div className="text-xl sm:text-3xl font-secondary select-none">
+                  <h2 className="text-xl sm:text-3xl font-secondary select-none">
                     My Cart
-                  </div>
+                  </h2>
                   <button
                     onClick={() => setIsCartOpen(false)}
                     className="hover:text-blue-200 duration-100 2xl:text-lg"
@@ -62,11 +62,11 @@ export const Cart = ({
                   </button>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                <main className="flex flex-col gap-3">
                   <AnimatePresence>
                     {cart.map((cartItem, i) => {
                       return (
-                        <motion.div
+                        <motion.li
                           whileTap={{ scale: 0.99 }}
                           transition={{
                             duration: 0.1,
@@ -93,13 +93,13 @@ export const Cart = ({
                           className="flex justify-between bg-zinc-700 p-4 rounded-xl cursor-default 
                           select-none items-center"
                         >
-                          <div className="font-bold lg:text-lg 3xl:text-xl">
+                          <h4 className="font-bold lg:text-lg 3xl:text-xl">
                             {cartItem.title}
-                          </div>
+                          </h4>
                           <div className="flex items-center gap-2.5">
-                            <div className="sm:text-lg 2xl:text-xl">
+                            <h5 className="sm:text-lg 2xl:text-xl">
                               ${cartItem.price}
-                            </div>
+                            </h5>
                             <button
                               className="px-2 py-0.5 bg-zinc-800 rounded-full hover:text-red-500 duration-100"
                               onClick={(e) => onDelete(cartItem.id)}
@@ -107,25 +107,26 @@ export const Cart = ({
                               ✕
                             </button>
                           </div>
-                        </motion.div>
+                        </motion.li>
                       );
                     })}
                   </AnimatePresence>
-                </div>
-              </div>
-              <div className="flex justify-around items-center  font-secondary">
-                <div className="text-lg sm:text-xl 2xl:text-2xl">
+                </main>
+              </section>
+
+              <section className="flex justify-around items-center  font-secondary">
+                <h3 className="text-lg sm:text-xl 2xl:text-2xl">
                   {cart.length > 0 ? `Total: $${total}` : `Total: $0`}
-                </div>
-                <motion.div
+                </h3>
+                <motion.button
                   whileTap={{ scale: 0.93 }}
                   className="text-xl sm:text-2xl  cursor-pointer select-none outline-none"
                 >
                   Checkout ➜
-                </motion.div>
-              </div>
+                </motion.button>
+              </section>
             </div>
-          </motion.div>
+          </motion.aside>
         </>
       )}
     </AnimatePresence>
